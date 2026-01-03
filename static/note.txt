@@ -1,0 +1,19 @@
+=== TEAM ===
+  Developer: Adnan Slamet Wibowo
+  Role: Web Developer & Prompt Designer
+  Location: Indonesia
+
+=== TECHNOLOGY & TOOLS ===
+  Backend: Python (Flask)
+  Frontend: HTML, CSS, JavaScript
+  Editor: Sublime Text dan Vscode
+  Performance: Lighthouse 90+
+  SEO: 100
+  OS: Debian 13
+
+=== THANKS ===
+  To W3Schools, Flask Documentation, Font Awesome, RGB.to, Medium and Dea afrizal.
+
+=== Quotes from Adnan ===
+
+"Saya masih belum begitu ahli dalam bidang yang saya kerjakan. Maka dari itu saya akan selalu belajar dari apa yang saya kerjakan."
