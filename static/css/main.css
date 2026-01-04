@@ -272,7 +272,7 @@ body {
   border-color: var(--cyan);
 }
 .lang-toggle-btn:active {
-  transform: scale(0.45);
+  transform: scale(0.95);
 }
 
 /* ======= HERO SECTION ======== */
