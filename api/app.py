@@ -17,9 +17,9 @@ def home():
 # def Maintenance_page():
 #     return render_template('Maintenance.html')
 
-@app.route('/blogspot')
+@app.route('/blog')
 def blog():
-    return render_template('blogSOON.html')
+    return render_template('blog.html')
 
 if __name__ == '__main__':
     app.run
