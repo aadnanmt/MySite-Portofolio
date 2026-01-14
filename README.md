@@ -14,7 +14,7 @@ This repository contains the source code for my personal portfolio website. It i
 
 The site is built with a focus on performance, interactivity, and a modern "Cyberpunk/Glassmorphism" aesthetic. It features a bilingual system (Indonesian/English) managed via JSON.
 
-**Live Demo:** [https://aadnanmt.web.id](https://aadnanmt.web.id)
+**Live Demo:** [https://www.aadnanmt.web.id](https://www.aadnanmt.web.id)
 
 ## Key Features
 
