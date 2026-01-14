@@ -1,6 +1,6 @@
-# Adnan Slamet Wibowo - Personal Portfolio
+# Portofio Website
 
-![Portfolio Preview](webport/webport.png) 
+![Portfolio Preview](image/webport.png) 
 <p align="center">
   <img src="https://img.shields.io/badge/Made%20with-Flask-black?style=for-the-badge&logo=flask" alt="Flask">
   <img src="https://img.shields.io/badge/Frontend-HTML%20%2F%20CSS%20%2F%20JS-blue?style=for-the-badge" alt="Frontend">
