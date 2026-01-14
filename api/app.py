@@ -17,7 +17,7 @@ def home():
 # def Maintenance_page():
 #     return render_template('Maintenance.html')
 
-@app.route('/lab')
+@app.route('/blog')
 def blog():
     return render_template('blog.html')
 
