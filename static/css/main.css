@@ -447,7 +447,7 @@ body {
 
 .glass-card {
   background: var(--glass);
-  /* backdrop-filter: blur(5px); */
+  backdrop-filter: blur(10px);
   border: var(--border);
 
   padding: 30px;
