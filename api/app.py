@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request
-
 # from flask_talisman import Talisman
+from flask_minify import Minify
 
 app = Flask(__name__, template_folder='../templates', static_folder='../static')
+
+Minify(app=app, html=True, js=True, cssless=True)
 
 # Talisman(app, 
 #     content_security_policy=None,
