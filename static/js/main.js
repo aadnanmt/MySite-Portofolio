@@ -290,7 +290,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "Web Developer",
             "Prompt Designer",
             "Problem Solver",
-            "Junior Penetration Tester",
+            "Penetration Tester",
             "Reverse Engineer",
             "Linux Enthusiast",
         ]);
