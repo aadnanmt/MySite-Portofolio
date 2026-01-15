@@ -1,3 +1,2 @@
 Flask
-talisman
 Flask-Minify
