@@ -1,1 +1,225 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>404 - System Malfunction</title><meta name="description" content="System error page with interactive pixel particles." /><style> :root { --bg: #0b0b0b; --cyan: #00f0ff; --accent: #7000ff; --text-on-cyan: #000000; } * { box-sizing: border-box; } html, body { height: 100%; width: 100%; } body { margin: 0; padding: 0; background: var(--bg); overflow: hidden; font-family: "Courier New", Courier, monospace; -webkit-font-smoothing: none; -moz-osx-font-smoothing: grayscale; } canvas { display: block; position: absolute; inset: 0; z-index: 1; } .ui-layer { position: absolute; left: 50%; transform: translateX(-50%); bottom: 10vh; text-align: center; z-index: 10; pointer-events: none; width: 100%; } .message { color: rgb(255 255 255 / 0.6); font-size: 0.8rem; margin-bottom: 20px; letter-spacing: 4px; text-transform: uppercase; user-select: none; } .btn { pointer-events: auto; display: inline-block; padding: 15px 40px; background: #fff0; border: 1px solid var(--cyan); color: var(--cyan); font-family: inherit; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; transition: all 0.2s ease-in-out; text-decoration: none; } .btn:hover, .btn:focus { background: var(--cyan); color: var(--text-on-cyan); box-shadow: 0 0 20px var(--cyan), inset 0 0 10px rgb(0 0 0 / 0.2); transform: translateY(-2px); outline: none; } .btn:active { transform: translateY(1px); box-shadow: 0 0 5px var(--cyan); } @media (max-width: 600px) { .btn { padding: 12px 30px; font-size: 0.9rem; } .message { font-size: 0.7rem; } } </style></head><body><canvas id="canvas1" aria-hidden="true"></canvas><div class="ui-layer" role="region" aria-label="Page actions"><div class="message">SYSTEM ERROR: NOT FOUND</div><button id="reassembleBtn" class="btn" aria-label="Return to safe zone"> RETURN HOME </button></div><script> const canvas = document.getElementById("canvas1"); const ctx = canvas.getContext("2d"); const rootStyles = getComputedStyle(document.documentElement); const themeColor = rootStyles.getPropertyValue("--cyan").trim(); const accentColor = rootStyles.getPropertyValue("--accent").trim(); let particleArray = []; let adjustX = 0; let adjustY = 0; const mouse = { x: undefined, y: undefined, radius: 50 }; const updateMouse = (e) => { mouse.x = e.x || e.changedTouches?.[0]?.clientX; mouse.y = e.y || e.changedTouches?.[0]?.clientY; }; window.addEventListener("mousemove", updateMouse); window.addEventListener("touchmove", updateMouse, { passive: !0 }); window.addEventListener("mouseleave", () => { mouse.x = undefined; mouse.y = undefined; }); window.addEventListener("touchend", () => { mouse.x = undefined; mouse.y = undefined; }); class Particle { constructor(x, y) { this.x = x; this.y = y; this.size = 3; this.baseX = x; this.baseY = y; this.density = Math.random() * 30 + 5; this.color = themeColor; this.returnSpeed = 0.08; } draw() { ctx.fillStyle = this.color; const s = this.size; ctx.fillRect(this.x - s / 2, this.y - s / 2, s, s); } update() { let dx = mouse.x - this.x; let dy = mouse.y - this.y; let distance = Math.sqrt(dx * dx + dy * dy); if (distance < mouse.radius && mouse.x !== undefined) { const forceDirectionX = dx / distance; const forceDirectionY = dy / distance; const force = (mouse.radius - distance) / mouse.radius; const directionX = forceDirectionX * force * this.density; const directionY = forceDirectionY * force * this.density; this.x -= directionX; this.y -= directionY; this.color = accentColor; } else { if (this.x !== this.baseX) { let dxMove = this.x - this.baseX; this.x -= dxMove / 10; } if (this.y !== this.baseY) { let dyMove = this.y - this.baseY; this.y -= dyMove / 10; } this.color = themeColor; } } } function init() { particleArray = []; canvas.width = window.innerWidth; canvas.height = window.innerHeight; ctx.clearRect(0, 0, canvas.width, canvas.height); const fontSize = Math.min(canvas.width / 4, 250); ctx.font = `900 ${fontSize}px "Jetbrains Mono", monospace`; ctx.fillStyle = "white"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText("404", canvas.width / 2, canvas.height / 2); const textCoordinates = ctx.getImageData( 0, 0, canvas.width, canvas.height ); const step = 6; for (let y = 0; y < textCoordinates.height; y += step) { for (let x = 0; x < textCoordinates.width; x += step) { const opacityIndex = y * 4 * textCoordinates.width + x * 4 + 3; if (textCoordinates.data[opacityIndex] > 128) { particleArray.push(new Particle(x, y)); } } } ctx.clearRect(0, 0, canvas.width, canvas.height); } function animate() { ctx.clearRect(0, 0, canvas.width, canvas.height); for (let i = 0; i < particleArray.length; i++) { particleArray[i].draw(); particleArray[i].update(); } requestAnimationFrame(animate); } let resizeTimer; window.addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { init(); }, 100); }); const btn = document.getElementById("reassembleBtn"); if (btn) { btn.addEventListener("click", () => { if (window.history.length > 1) window.history.back(); else window.location.href = "/"; }); } init(); animate(); </script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - System Malfunction</title>
+    <meta
+      name="description"
+      content="System error page with interactive pixel particles."
+    />
+    <style>
+      :root {
+        --bg: #0b0b0b;
+        --cyan: #00f0ff;
+        --accent: #7000ff;
+        --text-on-cyan: #000000;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        overflow: hidden;
+        font-family: "Courier New", Courier, monospace;
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      canvas {
+        display: block;
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+      }
+      .ui-layer {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10vh;
+        text-align: center;
+        z-index: 10;
+        pointer-events: none;
+        width: 100%;
+      }
+      .message {
+        color: rgb(255 255 255 / 0.6);
+        font-size: 0.8rem;
+        margin-bottom: 20px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        user-select: none;
+      }
+      .btn {
+        pointer-events: auto;
+        display: inline-block;
+        padding: 15px 40px;
+        background: #fff0;
+        border: 1px solid var(--cyan);
+        color: var(--cyan);
+        font-family: inherit;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        text-decoration: none;
+      }
+      .btn:hover,
+      .btn:focus {
+        background: var(--cyan);
+        color: var(--text-on-cyan);
+        box-shadow: 0 0 20px var(--cyan), inset 0 0 10px rgb(0 0 0 / 0.2);
+        transform: translateY(-2px);
+        outline: none;
+      }
+      .btn:active {
+        transform: translateY(1px);
+        box-shadow: 0 0 5px var(--cyan);
+      }
+      @media (max-width: 600px) {
+        .btn {
+          padding: 12px 30px;
+          font-size: 0.9rem;
+        }
+        .message {
+          font-size: 0.7rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas1" aria-hidden="true"></canvas>
+    <div class="ui-layer" role="region" aria-label="Page actions">
+      <div class="message">SYSTEM ERROR: NOT FOUND</div>
+      <button id="reassembleBtn" class="btn" aria-label="Return to safe zone">
+        RETURN HOME
+      </button>
+    </div>
+    <script>
+      const canvas = document.getElementById("canvas1");
+      const ctx = canvas.getContext("2d");
+      const rootStyles = getComputedStyle(document.documentElement);
+      const themeColor = rootStyles.getPropertyValue("--cyan").trim();
+      const accentColor = rootStyles.getPropertyValue("--accent").trim();
+      let particleArray = [];
+      let adjustX = 0;
+      let adjustY = 0;
+      const mouse = { x: undefined, y: undefined, radius: 50 };
+      const updateMouse = (e) => {
+        mouse.x = e.x || e.changedTouches?.[0]?.clientX;
+        mouse.y = e.y || e.changedTouches?.[0]?.clientY;
+      };
+      window.addEventListener("mousemove", updateMouse);
+      window.addEventListener("touchmove", updateMouse, { passive: !0 });
+      window.addEventListener("mouseleave", () => {
+        mouse.x = undefined;
+        mouse.y = undefined;
+      });
+      window.addEventListener("touchend", () => {
+        mouse.x = undefined;
+        mouse.y = undefined;
+      });
+      class Particle {
+        constructor(x, y) {
+          this.x = x;
+          this.y = y;
+          this.size = 3;
+          this.baseX = x;
+          this.baseY = y;
+          this.density = Math.random() * 30 + 5;
+          this.color = themeColor;
+          this.returnSpeed = 0.08;
+        }
+        draw() {
+          ctx.fillStyle = this.color;
+          const s = this.size;
+          ctx.fillRect(this.x - s / 2, this.y - s / 2, s, s);
+        }
+        update() {
+          let dx = mouse.x - this.x;
+          let dy = mouse.y - this.y;
+          let distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < mouse.radius && mouse.x !== undefined) {
+            const forceDirectionX = dx / distance;
+            const forceDirectionY = dy / distance;
+            const force = (mouse.radius - distance) / mouse.radius;
+            const directionX = forceDirectionX * force * this.density;
+            const directionY = forceDirectionY * force * this.density;
+            this.x -= directionX;
+            this.y -= directionY;
+            this.color = accentColor;
+          } else {
+            if (this.x !== this.baseX) {
+              let dxMove = this.x - this.baseX;
+              this.x -= dxMove / 10;
+            }
+            if (this.y !== this.baseY) {
+              let dyMove = this.y - this.baseY;
+              this.y -= dyMove / 10;
+            }
+            this.color = themeColor;
+          }
+        }
+      }
+      function init() {
+        particleArray = [];
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        const fontSize = Math.min(canvas.width / 4, 250);
+        ctx.font = `900 ${fontSize}px "Jetbrains Mono", monospace`;
+        ctx.fillStyle = "white";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("404", canvas.width / 2, canvas.height / 2);
+        const textCoordinates = ctx.getImageData(
+          0,
+          0,
+          canvas.width,
+          canvas.height
+        );
+        const step = 6;
+        for (let y = 0; y < textCoordinates.height; y += step) {
+          for (let x = 0; x < textCoordinates.width; x += step) {
+            const opacityIndex = y * 4 * textCoordinates.width + x * 4 + 3;
+            if (textCoordinates.data[opacityIndex] > 128) {
+              particleArray.push(new Particle(x, y));
+            }
+          }
+        }
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let i = 0; i < particleArray.length; i++) {
+          particleArray[i].draw();
+          particleArray[i].update();
+        }
+        requestAnimationFrame(animate);
+      }
+      let resizeTimer;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          init();
+        }, 100);
+      });
+      const btn = document.getElementById("reassembleBtn");
+      if (btn) {
+        btn.addEventListener("click", () => {
+          if (window.history.length > 1) window.history.back();
+          else window.location.href = "/";
+        });
+      }
+      init();
+      animate();
+    </script>
+  </body>
+</html>
