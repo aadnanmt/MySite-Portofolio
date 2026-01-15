@@ -21,7 +21,7 @@ def home():
 
 @app.route('/blog')
 def blog():
-    return render_template('blog.html')
+    return render_template('404.html')
 
 if __name__ == '__main__':
     app.run
