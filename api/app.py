@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request
 from flask_minify import Minify
-from flask_minify import Minify, decorators as minify_decorators
 
 app = Flask(__name__, template_folder='../templates', static_folder='../static')
+
+Minify(app=app, html=True, js=True, cssless=True)
 
 @app.after_request
 def add_header(response):
@@ -12,7 +13,6 @@ def add_header(response):
     return response
 
 @app.route('/')
-@minify_decorators.minify(html=True, js=True, cssless=True, caching_limit=0)
 def home():
     return render_template('main.html')
 
@@ -21,7 +21,6 @@ def home():
 #     return render_template('maintenance.html')
 
 @app.route('/blog')
-@minify_decorators.minify(html=True, js=True, cssless=True, caching_limit=0)
 def blog():
     return render_template('404.html')
 
