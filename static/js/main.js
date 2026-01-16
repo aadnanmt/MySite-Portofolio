@@ -50,13 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
             this.canvas = document.getElementById("particle-canvas");
             this.btn = document.getElementById("canvas-btn");
             if (!this.canvas) return;
-            
+
             this.ctx = this.canvas.getContext("2d");
             this.width = window.innerWidth;
             this.height = window.innerHeight;
             this.particles = [];
             this.animationId = null;
-            
+
             // Config
             this.config = {
                 color: "rgba(0, 240, 255, 0.8)",
@@ -68,14 +68,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // State
             this.isRunning = localStorage.getItem("canvas-state") != "false";
-            
+
             this.init();
         }
 
         init() {
             this.resize();
             this.createParticles();
-            
+
             // UI Init
             if (this.isRunning) {
                 this.canvas.classList.remove("canvas-hidden");
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
             window.addEventListener("resize", () => {
                 this.resize();
                 // Optional: recreate particles on huge resize to adjust density
-                this.createParticles(); 
+                this.createParticles();
             });
 
             if (this.btn) {
@@ -116,10 +116,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         update() {
             this.ctx.clearRect(0, 0, this.width, this.height);
-            
+
             for (let i = 0; i < this.particles.length; i++) {
                 let p = this.particles[i];
-                
+
                 // Bounce logic
                 if (p.x < 0 || p.x > this.width) p.vx *= -1;
                 if (p.y < 0 || p.y > this.height) p.vy *= -1;
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
         toggle() {
             this.isRunning = !this.isRunning;
             localStorage.setItem("canvas-state", this.isRunning);
-            
+
             if (this.isRunning) {
                 this.canvas.classList.remove("canvas-hidden");
                 this.resize();
@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         applyLanguage(lang) {
             if (!this.data) return;
-            
+
             if (this.langBtn) this.langBtn.textContent = lang.toUpperCase();
 
             const translations = this.data[lang];
@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 email: document.querySelector('input[name="email"]'),
                 msg: document.querySelector('textarea[name="message"]')
             };
-            
+
             const placeholderVal = lang === "en" ? "_" : "";
             Object.values(inputs).forEach(input => {
                 if (input) input.placeholder = placeholderVal;
@@ -260,7 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         type() {
             const currentFullText = this.texts[this.txtIndex];
-            
+
             if (this.isDeleting) {
                 this.charIndex--;
             } else {

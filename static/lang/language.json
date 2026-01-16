@@ -6,26 +6,21 @@
         "projects": "/PROYEK",
         "contact": "/KONTAK",
         "blog": "/BLOG",
-
         "status-me": "STATUS: ONLINE",
         "hero-subtitle": "Seorang ",
         "explore-project": ">_ TELUSURI PROYEK",
         "contact-me": ">_ HUBUNGI AKU",
         "my-Profile": "PROFIL AKU",
-
         "aboutTXT": "tentang_AKU.txt",
         "aboutTXT-Adnan": "Halloww, namaku <span>Adnan</span>. Aku penggemar ilmu pengetahuan, terutama di bidang <span>sains dan teknologi</span>.<br><br>Fokusku sekarang adalah <span>menjadi seorang Fullstack Developer</span> dan <span>Prompt Designer</span>. Aku suka membedah, mengonfigurasi, memodifikasi, memperbaiki, dan merusak <span>sumber kode, website, sistem hingga perangkat keras</span>. Aku memulai karir di dunia programming sejak <span>3 Agustus 2023</span> dan mulai aktif di saat <span>pertengahan tahun 2024</span>.<br><br>Aku juga selalu berusaha tetap relevan dan tampil berbeda di saat banyak <span>vibe coders tanpa substansi.</span><br><br>Mau kolaborasi proyek, diskusi ide, atau sekadar ngobrol santai. Bisa <span>hubungi aku kapan saja!</span>",
-
         "my-Skill": "KEAHLIAN & ALAT",
         "tech-Stack": ">_ TUMPUKAN TEKNOLOGI",
         "PROGRAMMING-Text": "Fullstack Development dengan fokus pada efisiensi backend dan interaktivitas modern.",
         "AI-PROMPT-Text": "Perancangan Prompt tingkat menengah untuk LLM dan integrasi API Kecerdasan Buatan.",
         "SysNet-Text": "Manajemen Server Linux, konfigurasi Arch/Debian, dan keamanan jaringan (CyberSec).",
         "Pentest-Text": "Saat ini, Hanya aku pergunakan untuk kepentingan ketahanan suatu sistem.",
-
         "my-Project": "PROYEK",
         "code-text": "KODE",
-
         "project1-text": "Asisten personal open-source yang aku buat",
         "project2-text": "Portofolio minimalis untuk ayah aku. Ringan, cepat, dan dibangun hanya dengan HTML, CSS, serta JavaScript murni.",
         "project3-text": "Sistem monitoring server real-time. Menampilkan data CPU, RAM, dan storage secara akurat menggunakan Flask dan ApexCharts.",
@@ -35,7 +30,6 @@
         "project7-text": "Portal streaming anime modern. Desain responsif dan performa optimal dengan React, Vite, serta TailwindCSS.",
         "project8-text": "Bot Telegram yang responsif. Dibuat pakai Node.js agar latensinya sangat rendah.",
         "project9-text": "Eksperimen integrasi Groq API. Chat real-time super cepat berkat model LLM terbaru dari Groq.",
-
         "my-contact": "KONTAK",
         "Your-name": ">_ NAMA:",
         "Your-email": ">_ EMAIL:",
@@ -44,7 +38,6 @@
         "Simple-contact": ">_ TAP KONTAK",
         "contact-text": "Kirim Pesan Langsung",
         "Telegram-Contact": "Respon Cepat",
-
         "Contact-Foot": "Informasi Kontak",
         "Instan-link": "TAUTAN CEPAT",
         "build": "DIBANGUN DENGAN",
@@ -52,7 +45,6 @@
         "underUnder": " | Dibawah",
         "credit-license": " Lisensi MIT"
     },
-
     "en": {
         "home": "/HOME",
         "profile": "/PROFILE",
@@ -60,27 +52,22 @@
         "projects": "/PROJECTS",
         "contact": "/CONTACT",
         "blog": "/BLOG",
-
         "status-me": "STATUS: ONLINE",
         "hero-subtitle": "A ",
         "explore-project": ">_ EXPLORE PROJECTS",
         "contact-me": ">_ CONTACT ME",
-
-        "my-Profile": "MY PROFILE",
+        "my-Profile": " MY PROFILE",
         "my-contact": " CONTACT",
         "aboutTXT": "about_ME.txt",
         "aboutTXT-Adnan": "Hello, my name is <span>Adnan</span>. I am a fan of science, especially in the fields of <span>science and technology</span>.<br><br>My current focus is on becoming a <span>Fullstack Developer</span> and <span>Prompt Designer</span>. I enjoy dissecting, configuring, modifying, repairing, and breaking <span>source code, websites, systems, and even hardware</span>. I started my career in programming on <span>August 3, 2023</span>, and became active in <span>mid-2024</span>.<br><br>I also strive to stay relevant and stand out in a sea of <span>coders without substance</span>.<br><br>Whether you want to collaborate on a project, discuss ideas, or just chat casually, feel free to <span>contact me anytime!</span>",
-
         "my-Skill": "SKILLS & TOOLS",
         "PROGRAMMING-Text": "Fullstack Development focusing on backend efficiency and modern interactivity.",
         "AI-PROMPT-Text": "Intermediate Prompt Engineering for LLMs and Artificial Intelligence API integration.",
         "SysNet-Text": "Linux Server Management, Arch/Debian configuration, and Network Security (CyberSec).",
         "Pentest-Text": "Currently, I only use it for the sake of system security.",
         "tech-Stack": ">_ TECH STACK",
-
         "my-Project": "PROJECTS",
         "code-text": "CODE",
-
         "project1-text": "Open-source personal assistant built to handle everyday tasks efficiently.",
         "project2-text": "Minimalist portfolio for my father. Lightweight and fast, built purely with HTML, CSS, and vanilla JavaScript.",
         "project3-text": "Real-time server monitoring system. Precise visualization of CPU, RAM, and storage data using Flask and ApexCharts.",
@@ -90,7 +77,6 @@
         "project7-text": "Modern anime streaming portal. Fully responsive interface with maximum performance using React, Vite, and TailwindCSS.",
         "project8-text": "Responsive Telegram bot. Built with Node.js for ultra-low latency.",
         "project9-text": "Groq API integration experiment. Super-fast real-time chat powered by cutting-edge LLM technology.",
-
         "Your-name": ">_ NAME:",
         "Your-email": ">_ EMAIL:",
         "Your-message": ">_ MESSAGE:",
@@ -98,7 +84,6 @@
         "Simple-contact": ">_ TAP CONTACT",
         "contact-text": "Send Direct Message",
         "Telegram-Contact": "Fast Response",
-
         "Contact-Foot": "CONTACT INFO",
         "Instan-link": "QUICK LINKS",
         "build": "BUILT WITH",
