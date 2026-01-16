@@ -3,24 +3,21 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <!-- head start -->
-  <head>
+<!-- head start -->
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>
-      Adnan Slamet Wibowo | Web Developer & Prompt Designer from Indonesia
+        Adnan Slamet Wibowo | Web Developer & Prompt Designer from Indonesia
     </title>
 
-    <meta
-      name="description"
-      content="Portfolio Adnan Slamet Wibowo. I am a Web Developer & Prompt Designer from Indonesia. Check out the latest creative projects and technological innovations."
-    />
+    <meta name="description"
+        content="Portfolio Adnan Slamet Wibowo. I am a Web Developer & Prompt Designer from Indonesia. Check out the latest creative projects and technological innovations." />
 
-    <meta
-      name="keywords"
-      content="Adnan Slamet Wibowo, ATE, aadnanmt, Adnan, Web Developer in Indonesia, Prompt Designer, Linux Enthusiast, Adnan Portfolio"
-    />
+    <meta name="keywords"
+        content="Adnan Slamet Wibowo, ATE, aadnanmt, Adnan, Web Developer in Indonesia, Prompt Designer, Linux Enthusiast, Adnan Portfolio" />
 
     <meta name="author" content="Adnan Slamet Wibowo" />
     <meta name="robots" content="index, follow" />
@@ -29,50 +26,27 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://aadnanmt.web.id/" />
     <meta property="og:title" content="Adnan Slamet Wibowo | Tech Enthusiast" />
-    <meta
-      property="og:description"
-      content="Explore the crafts made by Adnan: Combination of code and human-like prompts"
-    />
-    <meta
-      property="og:image"
-      content="{{ url_for('static', filename='img/me.jpg') }}"
-    />
+    <meta property="og:description"
+        content="Explore the crafts made by Adnan: Combination of code and human-like prompts" />
+    <meta property="og:image" content="{{ url_for('static', filename='img/me.jpg') }}" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@aadnanmt" />
     <meta name="twitter:creator" content="@aadnanmt" />
     <meta name="twitter:title" content="Adnan Slamet Wibowo | Portfolio" />
-    <meta
-      name="twitter:description"
-      content="Check out the portfolio of a young web developer and prompt designer from Indonesia."
-    />
-    <meta
-      name="twitter:image"
-      content="{{ url_for('static', filename='img/me.jpg') }}"
-    />
+    <meta name="twitter:description"
+        content="Check out the portfolio of a young web developer and prompt designer from Indonesia." />
+    <meta name="twitter:image" content="{{ url_for('static', filename='img/me.jpg') }}" />
 
     <!-- visit my secret note  -->
     <!-- aadnanmt.web.id/static/note.txt -->
 
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="{{ url_for('static', filename='svg/iconan.svg') }}"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="{{ url_for('static', filename='iconan.svg') }}"
-    />
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='svg/iconan.svg') }}" />
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='iconan.svg') }}" />
     <meta name="theme-color" content="#0a0a0a" />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/main.css') }}"
-    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
 
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/all.css') }}"
-    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css') }}" />
 
     <script type="application/ld+json">
       {
@@ -96,24 +70,25 @@
         "description": "I am a web developer. I specialize in modern web development. I also specialize in prompting artificial intelligence."
       }
     </script>
-  </head>
-  <!-- head end -->
+</head>
+<!-- head end -->
 
-  <!-- body start -->
-  <body>
+<!-- body start -->
+
+<body>
     <!-- preload start -->
     <div id="preloader">
-      <div class="loader-content">
-        <div class="scanner-ring"></div>
-        <div class="loading-text">INITIALIZING SYSTEM...</div>
-        <div class="terminal-log">
-          <p>&gt;_ Loading kernel 19.10.2007-amd64...</p>
-          <p>&gt;_ Loading initial ramdisk...</p>
-          <p>&gt;_ Mounting sysroot...</p>
-          <p>&gt;_ Mounting /dev/sda2...</p>
-          <p>&gt;_ Starting interface...</p>
+        <div class="loader-content">
+            <div class="scanner-ring"></div>
+            <div class="loading-text">INITIALIZING SYSTEM...</div>
+            <div class="terminal-log">
+                <p>&gt;_ Loading kernel 19.10.2007-amd64...</p>
+                <p>&gt;_ Loading initial ramdisk...</p>
+                <p>&gt;_ Mounting sysroot...</p>
+                <p>&gt;_ Mounting /dev/sda2...</p>
+                <p>&gt;_ Starting interface...</p>
+            </div>
         </div>
-      </div>
     </div>
     <!-- preload end -->
 
@@ -125,904 +100,674 @@
 
     <!-- header start -->
     <header class="header">
-      <!-- navbar start -->
-      <nav class="navbar glass-panel">
-        <!-- navbar logo -->
-        <a
-          href="hero"
-          class="nav-logo"
-          onclick="
+        <!-- navbar start -->
+        <nav class="navbar glass-panel">
+            <!-- navbar logo -->
+            <a href="hero" class="nav-logo" onclick="
                         document
                             .getElementById('hero')
                             .scrollIntoView({ behavior: 'smooth' });
                         return false;
-                    "
-        >
-          A<span class="cyan">TEC</span>
-        </a>
+                    ">
+                A<span class="cyan">TEC</span>
+            </a>
 
-        <!-- menu navbar start-->
-        <ul class="nav-menu">
-          <li>
-            <a
-              href="hero"
-              class="nav-link"
-              onclick="
+            <!-- menu navbar start-->
+            <ul class="nav-menu">
+                <li>
+                    <a href="hero" class="nav-link" onclick="
                                 document
                                     .getElementById('hero')
                                     .scrollIntoView({ behavior: 'smooth' });
                                 return false;
-                            "
-            >
-              <span data-lang="home"></span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="about"
-              class="nav-link"
-              onclick="
+                            ">
+                        <span data-lang="home"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="about" class="nav-link" onclick="
                                 document
                                     .getElementById('about')
                                     .scrollIntoView({ behavior: 'smooth' });
                                 return false;
-                            "
-            >
-              <span data-lang="profile"></span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="skills"
-              class="nav-link"
-              onclick="
+                            ">
+                        <span data-lang="profile"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="skills" class="nav-link" onclick="
                                 document
                                     .getElementById('skills')
                                     .scrollIntoView({ behavior: 'smooth' });
                                 return false;
-                            "
-            >
-              <span data-lang="skills"></span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="projects"
-              class="nav-link"
-              onclick="
+                            ">
+                        <span data-lang="skills"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="projects" class="nav-link" onclick="
                                 document
                                     .getElementById('projects')
                                     .scrollIntoView({ behavior: 'smooth' });
                                 return false;
-                            "
-            >
-              <span data-lang="projects"></span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="contact"
-              class="nav-link"
-              onclick="
+                            ">
+                        <span data-lang="projects"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact" class="nav-link" onclick="
                                 document
                                     .getElementById('contact')
                                     .scrollIntoView({ behavior: 'smooth' });
                                 return false;
-                            "
-            >
-              <span data-lang="contact"></span>
-            </a>
-          </li>
-          <li>
-            <a href="/blog" class="nav-link">
-              <span data-lang="blog"></span>
-            </a>
-          </li>
-        </ul>
-        <!-- menu navbar end -->
+                            ">
+                        <span data-lang="contact"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog" class="nav-link">
+                        <span data-lang="blog"></span>
+                    </a>
+                </li>
+            </ul>
+            <!-- menu navbar end -->
 
-        <div class="nav-extra">
-          <button id="lang-btn" class="lang-toggle-btn">ID</button>
+            <div class="nav-extra">
+                <button id="lang-btn" class="lang-toggle-btn">ID</button>
 
-          <button
-            id="canvas-btn"
-            onclick="window.toggleParticleSystem()"
-            class="lang-toggle-btn"
-          >
-            ON
-          </button>
+                <button id="canvas-btn" onclick="window.toggleParticleSystem()" class="lang-toggle-btn">
+                    ON
+                </button>
 
-          <div class="hamburger bar-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </div>
-        <!-- toogle button end -->
-      </nav>
-      <!-- navbar end -->
+                <div class="hamburger bar-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+            <!-- toogle button end -->
+        </nav>
+        <!-- navbar end -->
     </header>
     <!-- header end -->
 
     <!-- main start -->
     <main>
-      <!-- hero section start -->
-      <section id="hero" class="hero-section">
-        <div class="hero-content">
-          <div class="status" data-lang="status-me">
-            <i class="fa-solid fa-terminal fa-fade"></i>
-          </div>
-          <h1 class="glitch-text" data-text="Adnan Slamet W.">
-            Adnan Slamet Wibowo
-          </h1>
-          <p class="hero-subtitle">
-            <span data-lang="hero-subtitle">I am a</span>
-            <span id="typing-text"></span><span class="cursor">_</span>
-          </p>
+        <!-- hero section start -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="status" data-lang="status-me">
+                    <i class="fa-solid fa-terminal fa-fade"></i>
+                </div>
+                <h1 class="glitch-text" data-text="Adnan Slamet W.">
+                    Adnan Slamet Wibowo
+                </h1>
+                <p class="hero-subtitle">
+                    <span data-lang="hero-subtitle">I am a</span>
+                    <span id="typing-text"></span><span class="cursor">_</span>
+                </p>
 
-          <!-- hero button -->
-          <div class="hero-buttons">
-            <a
-              href="#projects"
-              class="btn-primary"
-              onclick="
+                <!-- hero button -->
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn-primary" onclick="
                                 document
                                     .getElementById('projects')
                                     .scrollIntoView({ behavior: 'smooth' });
                                 return false;
-                            "
-            >
-              <span data-lang="explore-project"></span>
-            </a>
+                            ">
+                        <span data-lang="explore-project"></span>
+                    </a>
 
-            <a
-              href="#contact"
-              class="btn-secondary"
-              onclick="
+                    <a href="#contact" class="btn-secondary" onclick="
                                 document
                                     .getElementById('contact')
                                     .scrollIntoView({ behavior: 'smooth' });
                                 return false;
-                            "
-            >
-              <span data-lang="contact-me"></span>
-            </a>
-          </div>
-
-          <!-- sosial media link+icom -->
-          <div class="social-links">
-            <a
-              href="https://github.com/aadnanmt"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Github Adnan"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              href="https://linkedin.com/in/adnan-slamet-wibowo-73906035b"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit LinkedIn Adnan"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a
-              href="https://lynk.id/aadnanmt"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit LynkId Adnan"
-              ><i class="fa-solid fa-store"></i
-            ></a>
-            <a
-              href="https://x.com/aadnanmt"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit X (Twitter) Adnan"
-              ><i class="fa-brands fa-x-twitter"></i
-            ></a>
-            <a
-              href="https://instagram.com/aadnanmt"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Instagram Adnan"
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </div>
-        </div>
-      </section>
-      <!-- hero sectin end -->
-
-      <!-- about/profile section start -->
-      <section id="about" class="content-section">
-        <div class="section-title-wrapper">
-          <h2 class="section-title">
-            <i class="fa-solid fa-terminal fa-fade"></i>
-            <span data-lang="my-Profile"></span>
-          </h2>
-          <div class="line"></div>
-        </div>
-
-        <div class="about-grid">
-          <div class="profile-wrapper">
-            <img
-              src="{{ url_for('static', filename='img/me.jpg') }}"
-              alt="Adnan si Developer yang sangat Humble"
-              class="profile-img"
-              loading="lazy"
-            />
-            <div class="img-border"></div>
-          </div>
-
-          <div class="glass-card">
-            <div class="code-header">
-              <span class="filename" data-lang="aboutTXT"></span>
-            </div>
-            <p class="about-text" data-lang="aboutTXT-Adnan"></p>
-          </div>
-        </div>
-      </section>
-      <!-- about/profile section end -->
-
-      <!-- skills and tools section start -->
-      <section id="skills" class="content-section">
-        <div class="section-title-wrapper">
-          <h2 class="section-title" data-lang="my-Skill">
-            <i class="fa-solid fa-terminal fa-fade"></i>
-          </h2>
-          <div class="line"></div>
-        </div>
-
-        <div class="skill-cards-grid">
-          <div class="glass-card skill-box">
-            <div class="skill-icon-glow">
-              <i class="fas fa-code"></i>
-            </div>
-            <h3>PROGRAMMING</h3>
-            <p data-lang="PROGRAMMING-Text"></p>
-          </div>
-
-          <div class="glass-card skill-box">
-            <div class="skill-icon-glow">
-              <i class="fas fa-brain"></i>
-            </div>
-            <h3>AI & PROMPT</h3>
-            <p data-lang="AI-PROMPT-Text"></p>
-          </div>
-
-          <div class="glass-card skill-box">
-            <div class="skill-icon-glow">
-              <i class="fab fa-linux"></i>
-            </div>
-            <h3>SISTEM & JARINGAN</h3>
-            <p data-lang="SysNet-Text"></p>
-          </div>
-
-          <div class="glass-card skill-box">
-            <div class="skill-icon-glow">
-              <i class="fa-solid fa-shield"></i>
-            </div>
-            <h3>PENETRATION TESTING</h3>
-            <p data-lang="Pentest-Text"></p>
-          </div>
-        </div>
-
-        <div class="tech-stack-wrapper mt-large">
-          <h3 class="stack-title" data-lang="tech-Stack"></h3>
-          <div class="glass-card">
-            <div class="tools-grid">
-              <div class="tool-item">
-                <i class="fab fa-html5"></i><span>HTML</span>
-              </div>
-              <div class="tool-item">
-                <i class="fab fa-css3-alt"></i><span>CSS</span>
-              </div>
-              <div class="tool-item">
-                <i class="fab fa-js"></i><span>JS</span>
-              </div>
-              <div class="tool-item">
-                <i class="fab fa-python"></i><span>Python</span>
-              </div>
-              <div class="tool-item">
-                <i class="fas fa-terminal"></i><span>Bash</span>
-              </div>
-              <div class="tool-item">
-                <i class="fab fa-node"></i><span>Node JS</span>
-              </div>
-              <div class="tool-item">
-                <i class="fab fa-react"></i><span>React</span>
-              </div>
-              <div class="tool-item">
-                <i class="fab fa-golang"></i><span>Golang</span>
-              </div>
-              <div class="tool-item">
-                <i class="fab fa-linux"></i><span>Linux</span>
-              </div>
-              <div class="tool-item">
-                <i class="fab fa-windows"></i><span>Windows</span>
-              </div>
-              <div class="tool-item">
-                <i class="fab fa-docker"></i><span>Docker</span>
-              </div>
-              <div class="tool-item">
-                <i class="fab fa-git-alt"></i><span>Git</span>
-              </div>
-              <div class="tool-item">
-                <i class="fa-brands fa-cloudflare"></i><span>Cloudfl</span>
-              </div>
-              <div class="tool-item">
-                <i class="fa-brands fa-firefox"></i><span>Firefox</span>
-              </div>
-              <div class="tool-item">
-                <i class="fab fa-chrome"></i><span>Chrome</span>
-              </div>
-              <div class="tool-item">
-                <i class="fa-solid fa-code"></i><span>VsCode</span>
-              </div>
-              <div class="tool-item">
-                <i class="fab fa-markdown"></i><span>Markdown</span>
-              </div>
-              <div class="tool-item">
-                <i class="fa-brands fa-cloudflare"></i><span>Cloudflare</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- skills and tools section end -->
-
-      <section id="projects" class="content-section">
-        <div class="section-title-wrapper">
-          <h2 class="section-title" data-lang="my-Project">
-            <i class="fa-solid fa-terminal fa-fade"></i>
-          </h2>
-          <div class="line"></div>
-        </div>
-        <div class="project-grid">
-          <div class="project-card glass-card">
-            <div class="card-head">
-              <i class="fas fa-robot"></i><span>Asklily Bot</span>
-            </div>
-            <div class="card-body">
-              <p data-lang="project1-text"></p>
-              <div class="tags"><span>JS</span><span>JSON</span></div>
-            </div>
-            <div class="card-foot">
-              <a
-                href="https://github.com/aadnanmt/AskLily"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Asklily Bot source code on GitHub"
-                data-lang="code-text"
-                ><i class="fas fa-code"></i
-              ></a>
-              <a
-                href="https://asklily.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Asklily Bot demo"
-                >DEMO <i class="fas fa-external-link-alt"></i
-              ></a>
-            </div>
-          </div>
-          <div class="project-card glass-card">
-            <div class="card-head">
-              <i class="fa-solid fa-code"></i><span>My Father Portfolio</span>
-            </div>
-            <div class="card-body">
-              <p data-lang="project2-text"></p>
-              <div class="tags">
-                <span>HTML</span><span>CSS</span><span>JS</span>
-              </div>
-            </div>
-            <div class="card-foot">
-              <a
-                href="https://github.com/aadnanmt/myFather-Portfolio"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit My Father Portfolio source code on GitHub"
-                data-lang="code-text"
-                >KODE <i class="fas fa-code"></i
-              ></a>
-              <a
-                href="https://susantoelectric.netlify.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit My Father Portfolio demo"
-                >DEMO <i class="fas fa-external-link-alt"></i
-              ></a>
-            </div>
-          </div>
-          <div class="project-card glass-card">
-            <div class="card-head">
-              <i class="fa-solid fa-laptop-code"></i
-              ><span>Maybyte Monitor</span>
-            </div>
-            <div class="card-body">
-              <p data-lang="project3-text"></p>
-              <div class="tags">
-                <span>Flask</span><span>Psu-Util</span><span>Flask-Cors</span>
-              </div>
-            </div>
-            <div class="card-foot">
-              <a
-                href="https://github.com/aadnanmt/Maybyte"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Maybyte Monitor source code on GitHub"
-                data-lang="code-text"
-                >KODE <i class="fas fa-code"></i
-              ></a>
-              <a
-                href="https://maybyte.pythonanywhere.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Maybyte Monitor demo"
-                >DEMO <i class="fas fa-external-link-alt"></i
-              ></a>
-            </div>
-          </div>
-          <div class="project-card glass-card">
-            <div class="card-head">
-              <i class="fa-solid fa-heart"></i><span>Sicin</span>
-            </div>
-            <div class="card-body">
-              <p data-lang="project4-text"></p>
-              <div class="tags">
-                <span>HTML</span><span>CSS</span><span>JS</span>
-              </div>
-            </div>
-            <div class="card-foot">
-              <a
-                href="https://github.com/aadnanmt/Sicin"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Sicin source code on GitHub"
-                data-lang="code-text"
-                >KODE <i class="fas fa-code"></i
-              ></a>
-              <a
-                href="https://aadnanmt.github.io/Sicin"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Sicin demo"
-                >DEMO <i class="fas fa-external-link-alt"></i
-              ></a>
-            </div>
-          </div>
-          <div class="project-card glass-card">
-            <div class="card-head">
-              <i class="fa-solid fa-network-wired"></i
-              ><span>FiberOptic Class</span>
-            </div>
-            <div class="card-body">
-              <p data-lang="project5-text"></p>
-              <div class="tags">
-                <span>Flask</span><span>Supabase</span><span>TailwindCSS</span>
-              </div>
-            </div>
-            <div class="card-foot">
-              <a
-                href="https://github.com/aadnanmt/FiberOptic"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit FiberOptic Class source code on GitHub"
-                data-lang="code-text"
-                >KODE <i class="fas fa-code"></i
-              ></a>
-              <a
-                href="https://www.fiberoptic.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit FiberOptic Class demo"
-                >DEMO <i class="fas fa-external-link-alt"></i
-              ></a>
-            </div>
-          </div>
-          <div class="project-card glass-card">
-            <div class="card-head">
-              <i class="fa-solid fa-store"></i><span>Restorean Site</span>
-            </div>
-            <div class="card-body">
-              <p data-lang="project6-text"></p>
-              <div class="tags">
-                <span>HTML</span><span>CSS</span><span>JS</span
-                ><span>Github Page</span>
-              </div>
-            </div>
-            <div class="card-foot">
-              <a
-                href="https://github.com/aadnanmt/Web-Restorean"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Restorean Site source code on GitHub"
-                data-lang="code-text"
-                >KODE <i class="fas fa-code"></i
-              ></a>
-              <a
-                href="https://aadnanmt.github.io/Web-Restorean/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Restorean Site demo"
-                >DEMO <i class="fas fa-external-link-alt"></i
-              ></a>
-            </div>
-          </div>
-          <div class="project-card glass-card">
-            <div class="card-head">
-              <i class="fa-solid fa-film"></i><span>Lixanime</span>
-            </div>
-            <div class="card-body">
-              <p data-lang="project7-text"></p>
-              <div class="tags">
-                <span>TailwindCSS</span><span>React</span><span>Vite</span>
-              </div>
-            </div>
-            <div class="card-foot">
-              <a
-                href="https://github.com/aadnanmt/Lixanime"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Lixanime source code on GitHub"
-                data-lang="code-text"
-                >KODE <i class="fas fa-code"></i
-              ></a>
-              <a
-                href="https://lixanime.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Lixanime demo"
-                >DEMO <i class="fas fa-external-link-alt"></i
-              ></a>
-            </div>
-          </div>
-          <div class="project-card glass-card">
-            <div class="card-head">
-              <i class="fas fa-robot"></i><span>UBoteram</span>
-            </div>
-            <div class="card-body">
-              <p data-lang="project8-text"></p>
-              <div class="tags">
-                <span>Nodemon</span><span>JS</span><span>BotFather</span>
-              </div>
-            </div>
-            <div class="card-foot">
-              <a
-                href="https://github.com/aadnanmt/UBoteram"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit UBoteram source code on GitHub"
-                data-lang="code-text"
-                >KODE <i class="fas fa-code"></i
-              ></a>
-            </div>
-          </div>
-          <div class="project-card glass-card">
-            <div class="card-head">
-              <i class="fas fa-robot"></i><span>Groqili</span>
-            </div>
-            <div class="card-body">
-              <p data-lang="project9-text"></p>
-              <div class="tags">
-                <span>Python</span><span>Console Groq</span>
-              </div>
-            </div>
-            <div class="card-foot">
-              <a
-                href="https://github.com/aadnanmt/Groqili"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Groqili source code on GitHub"
-                data-lang="code-text"
-                >KODE <i class="fas fa-code"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- project section end -->
-
-      <!-- contact section start -->
-      <section id="contact" class="content-section">
-        <div class="section-title-wrapper">
-          <h2 class="section-title" data-lang="my-contact">
-            <i class="fa-solid fa-terminal fa-fade"></i>
-          </h2>
-          <div class="line"></div>
-        </div>
-
-        <div class="contact-container">
-          <div class="contact-form-wrapper glass-card">
-            <form action="https://api.web3forms.com/submit" method="POST">
-              <input
-                type="hidden"
-                name="access_key"
-                value="6da570d1-76ee-409c-ad0b-c07b60f64676"
-              />
-
-              <div class="form-group">
-                <label data-lang="Your-name"></label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  placeholder="_"
-                  aria-label="Your name"
-                />
-              </div>
-
-              <div class="form-group">
-                <label data-lang="Your-email"></label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="_"
-                  aria-label="Your email"
-                />
-              </div>
-
-              <div class="form-group">
-                <label data-lang="Your-message"></label>
-                <textarea
-                  name="message"
-                  cols="10"
-                  rows="5"
-                  required
-                  placeholder="_"
-                  aria-label="Message"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                class="btn-primary full-width"
-                data-lang="Send-Message"
-              ></button>
-            </form>
-          </div>
-
-          <div class="instant-contact-wrapper mt-large">
-            <h3 class="stack-title" data-lang="Simple-contact"></h3>
-
-            <div class="contact-detail glass-card">
-              <a
-                href="https://wa.me/6285177134033"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contact-item"
-              >
-                <div class="icon-box">
-                  <i class="fab fa-whatsapp"></i>
+                            ">
+                        <span data-lang="contact-me"></span>
+                    </a>
                 </div>
-                <div class="contact-text">
-                  <h4 class="title-contact">WhatsApp</h4>
-                  <span class="contact-instan" data-lang="contact-text"></span>
-                </div>
-              </a>
 
-              <a href="mailto:aadnanmtcontact@gmail.com" class="contact-item">
-                <div class="icon-box">
-                  <i class="fas fa-envelope"></i>
+                <!-- sosial media link+icom -->
+                <div class="social-links">
+                    <a href="https://github.com/aadnanmt" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit Github Adnan"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/adnan-slamet-wibowo-73906035b" target="_blank"
+                        rel="noopener noreferrer" aria-label="Visit LinkedIn Adnan"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://lynk.id/aadnanmt" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit LynkId Adnan"><i class="fa-solid fa-store"></i></a>
+                    <a href="https://x.com/aadnanmt" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit X (Twitter) Adnan"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://instagram.com/aadnanmt" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit Instagram Adnan"><i class="fab fa-instagram"></i></a>
                 </div>
-                <div class="contact-text">
-                  <h4 class="title-contact">Email</h4>
-                  <span class="contact-instan">aadnanmtcontact@gmail.com</span>
-                </div>
-              </a>
+            </div>
+        </section>
+        <!-- hero sectin end -->
 
-              <a
-                href="https://t.me/aadnanmtech"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contact-item"
-              >
-                <div class="icon-box">
-                  <i class="fab fa-telegram"></i>
-                </div>
-                <div class="contact-text">
-                  <h4 class="title-contact">Telegram</h4>
-                  <span
-                    class="contact-instan"
-                    data-lang="Telegram-Contact"
-                  ></span>
-                </div>
-              </a>
+        <!-- about/profile section start -->
+        <section id="about" class="content-section">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-terminal fa-fade"></i>
+                    <span data-lang="my-Profile"></span>
+                </h2>
+                <div class="line"></div>
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- contact section end -->
-    </main>
-    <!-- main end -->
 
-    <!-- footer start -->
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-columns">
-          <div class="footer-column">
-            <h3 data-lang="Contact-Foot"></h3>
-            <div class="footer-item">
-              <i class="fas fa-map-marker-alt cyan"></i>
-              <div>
-                <p>Malang, Jawa Timur, Indonesia.</p>
-              </div>
-            </div>
-            <div class="footer-item">
-              <i class="fas fa-envelope cyan"></i>
-              <p>aadnanmtcontact@gmail.com</p>
-            </div>
-            <div class="footer-item">
-              <i class="fas fa-phone cyan"></i>
-              <p>0851-7713-4033</p>
-            </div>
-          </div>
+            <div class="about-grid">
+                <div class="profile-wrapper">
+                    <img src="{{ url_for('static', filename='img/me.jpg') }}"
+                        alt="Adnan si Developer yang sangat Humble" class="profile-img" loading="lazy" />
+                    <div class="img-border"></div>
+                </div>
 
-          <div class="footer-column">
-            <h3 data-lang="Instan-link"></h3>
-            <ul class="footer-links">
-              <li>
-                <a
-                  href="hero"
-                  onclick="
+                <div class="glass-card">
+                    <div class="code-header">
+                        <span class="filename" data-lang="aboutTXT"></span>
+                    </div>
+                    <p class="about-text" data-lang="aboutTXT-Adnan"></p>
+                </div>
+            </div>
+        </section>
+        <!-- about/profile section end -->
+
+        <!-- skills and tools section start -->
+        <section id="skills" class="content-section">
+            <div class="section-title-wrapper">
+                <h2 class="section-title" data-lang="my-Skill">
+                    <i class="fa-solid fa-terminal fa-fade"></i>
+                </h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="skill-cards-grid">
+                <div class="glass-card skill-box">
+                    <div class="skill-icon-glow">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>PROGRAMMING</h3>
+                    <p data-lang="PROGRAMMING-Text"></p>
+                </div>
+
+                <div class="glass-card skill-box">
+                    <div class="skill-icon-glow">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI & PROMPT</h3>
+                    <p data-lang="AI-PROMPT-Text"></p>
+                </div>
+
+                <div class="glass-card skill-box">
+                    <div class="skill-icon-glow">
+                        <i class="fab fa-linux"></i>
+                    </div>
+                    <h3>SISTEM & JARINGAN</h3>
+                    <p data-lang="SysNet-Text"></p>
+                </div>
+
+                <div class="glass-card skill-box">
+                    <div class="skill-icon-glow">
+                        <i class="fa-solid fa-shield"></i>
+                    </div>
+                    <h3>PENETRATION TESTING</h3>
+                    <p data-lang="Pentest-Text"></p>
+                </div>
+            </div>
+
+            <div class="tech-stack-wrapper mt-large">
+                <h3 class="stack-title" data-lang="tech-Stack"></h3>
+                <div class="glass-card">
+                    <div class="tools-grid">
+                        <div class="tool-item">
+                            <i class="fab fa-html5"></i><span>HTML</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-css3-alt"></i><span>CSS</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-js"></i><span>JS</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-python"></i><span>Python</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-terminal"></i><span>Bash</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-node"></i><span>Node JS</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-react"></i><span>React</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-golang"></i><span>Golang</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-linux"></i><span>Linux</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-windows"></i><span>Windows</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-docker"></i><span>Docker</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-git-alt"></i><span>Git</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fa-brands fa-cloudflare"></i><span>Cloudfl</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fa-brands fa-firefox"></i><span>Firefox</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-chrome"></i><span>Chrome</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fa-solid fa-code"></i><span>VsCode</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-markdown"></i><span>Markdown</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fa-brands fa-cloudflare"></i><span>Cloudflare</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- skills and tools section end -->
+
+        <section id="projects" class="content-section">
+            <div class="section-title-wrapper">
+                <h2 class="section-title" data-lang="my-Project">
+                    <i class="fa-solid fa-terminal fa-fade"></i>
+                </h2>
+                <div class="line"></div>
+            </div>
+            <div class="project-grid">
+                <div class="project-card glass-card">
+                    <div class="card-head">
+                        <i class="fas fa-robot"></i><span>Asklily Bot</span>
+                    </div>
+                    <div class="card-body">
+                        <p data-lang="project1-text"></p>
+                        <div class="tags"><span>JS</span><span>JSON</span></div>
+                    </div>
+                    <div class="card-foot">
+                        <a href="https://github.com/aadnanmt/AskLily" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit Asklily Bot source code on GitHub" data-lang="code-text"><i
+                                class="fas fa-code"></i></a>
+                        <a href="https://asklily.vercel.app/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit Asklily Bot demo">DEMO <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card glass-card">
+                    <div class="card-head">
+                        <i class="fa-solid fa-code"></i><span>My Father Portfolio</span>
+                    </div>
+                    <div class="card-body">
+                        <p data-lang="project2-text"></p>
+                        <div class="tags">
+                            <span>HTML</span><span>CSS</span><span>JS</span>
+                        </div>
+                    </div>
+                    <div class="card-foot">
+                        <a href="https://github.com/aadnanmt/myFather-Portfolio" target="_blank"
+                            rel="noopener noreferrer" aria-label="Visit My Father Portfolio source code on GitHub"
+                            data-lang="code-text">KODE <i class="fas fa-code"></i></a>
+                        <a href="https://susantoelectric.netlify.app" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit My Father Portfolio demo">DEMO <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card glass-card">
+                    <div class="card-head">
+                        <i class="fa-solid fa-laptop-code"></i><span>Maybyte Monitor</span>
+                    </div>
+                    <div class="card-body">
+                        <p data-lang="project3-text"></p>
+                        <div class="tags">
+                            <span>Flask</span><span>Psu-Util</span><span>Flask-Cors</span>
+                        </div>
+                    </div>
+                    <div class="card-foot">
+                        <a href="https://github.com/aadnanmt/Maybyte" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit Maybyte Monitor source code on GitHub" data-lang="code-text">KODE <i
+                                class="fas fa-code"></i></a>
+                        <a href="https://maybyte.pythonanywhere.com" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit Maybyte Monitor demo">DEMO <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card glass-card">
+                    <div class="card-head">
+                        <i class="fa-solid fa-heart"></i><span>Sicin</span>
+                    </div>
+                    <div class="card-body">
+                        <p data-lang="project4-text"></p>
+                        <div class="tags">
+                            <span>HTML</span><span>CSS</span><span>JS</span>
+                        </div>
+                    </div>
+                    <div class="card-foot">
+                        <a href="https://github.com/aadnanmt/Sicin" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit Sicin source code on GitHub" data-lang="code-text">KODE <i
+                                class="fas fa-code"></i></a>
+                        <a href="https://aadnanmt.github.io/Sicin" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit Sicin demo">DEMO <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card glass-card">
+                    <div class="card-head">
+                        <i class="fa-solid fa-network-wired"></i><span>FiberOptic Class</span>
+                    </div>
+                    <div class="card-body">
+                        <p data-lang="project5-text"></p>
+                        <div class="tags">
+                            <span>Flask</span><span>Supabase</span><span>TailwindCSS</span>
+                        </div>
+                    </div>
+                    <div class="card-foot">
+                        <a href="https://github.com/aadnanmt/FiberOptic" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit FiberOptic Class source code on GitHub" data-lang="code-text">KODE <i
+                                class="fas fa-code"></i></a>
+                        <a href="https://www.fiberoptic.vercel.app" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit FiberOptic Class demo">DEMO <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card glass-card">
+                    <div class="card-head">
+                        <i class="fa-solid fa-store"></i><span>Restorean Site</span>
+                    </div>
+                    <div class="card-body">
+                        <p data-lang="project6-text"></p>
+                        <div class="tags">
+                            <span>HTML</span><span>CSS</span><span>JS</span><span>Github Page</span>
+                        </div>
+                    </div>
+                    <div class="card-foot">
+                        <a href="https://github.com/aadnanmt/Web-Restorean" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit Restorean Site source code on GitHub" data-lang="code-text">KODE <i
+                                class="fas fa-code"></i></a>
+                        <a href="https://aadnanmt.github.io/Web-Restorean/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit Restorean Site demo">DEMO <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card glass-card">
+                    <div class="card-head">
+                        <i class="fa-solid fa-film"></i><span>Lixanime</span>
+                    </div>
+                    <div class="card-body">
+                        <p data-lang="project7-text"></p>
+                        <div class="tags">
+                            <span>TailwindCSS</span><span>React</span><span>Vite</span>
+                        </div>
+                    </div>
+                    <div class="card-foot">
+                        <a href="https://github.com/aadnanmt/Lixanime" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit Lixanime source code on GitHub" data-lang="code-text">KODE <i
+                                class="fas fa-code"></i></a>
+                        <a href="https://lixanime.vercel.app" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit Lixanime demo">DEMO <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-card glass-card">
+                    <div class="card-head">
+                        <i class="fas fa-robot"></i><span>UBoteram</span>
+                    </div>
+                    <div class="card-body">
+                        <p data-lang="project8-text"></p>
+                        <div class="tags">
+                            <span>Nodemon</span><span>JS</span><span>BotFather</span>
+                        </div>
+                    </div>
+                    <div class="card-foot">
+                        <a href="https://github.com/aadnanmt/UBoteram" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit UBoteram source code on GitHub" data-lang="code-text">KODE <i
+                                class="fas fa-code"></i></a>
+                    </div>
+                </div>
+                <div class="project-card glass-card">
+                    <div class="card-head">
+                        <i class="fas fa-robot"></i><span>Groqili</span>
+                    </div>
+                    <div class="card-body">
+                        <p data-lang="project9-text"></p>
+                        <div class="tags">
+                            <span>Python</span><span>Console Groq</span>
+                        </div>
+                    </div>
+                    <div class="card-foot">
+                        <a href="https://github.com/aadnanmt/Groqili" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit Groqili source code on GitHub" data-lang="code-text">KODE <i
+                                class="fas fa-code"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- project section end -->
+
+        <!-- contact section start -->
+        <section id="contact" class="content-section">
+            <div class="section-title-wrapper">
+                <h2 class="section-title" data-lang="my-contact">
+                    <i class="fa-solid fa-terminal fa-fade"></i>
+                </h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-form-wrapper glass-card">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="6da570d1-76ee-409c-ad0b-c07b60f64676" />
+
+                        <div class="form-group">
+                            <label data-lang="Your-name"></label>
+                            <input type="text" name="name" required placeholder="_" aria-label="Your name" />
+                        </div>
+
+                        <div class="form-group">
+                            <label data-lang="Your-email"></label>
+                            <input type="email" name="email" required placeholder="_" aria-label="Your email" />
+                        </div>
+
+                        <div class="form-group">
+                            <label data-lang="Your-message"></label>
+                            <textarea name="message" cols="10" rows="5" required placeholder="_"
+                                aria-label="Message"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary full-width" data-lang="Send-Message"></button>
+                    </form>
+                </div>
+
+                <div class="instant-contact-wrapper mt-large">
+                    <h3 class="stack-title" data-lang="Simple-contact"></h3>
+
+                    <div class="contact-detail glass-card">
+                        <a href="https://wa.me/6285177134033" target="_blank" rel="noopener noreferrer"
+                            class="contact-item">
+                            <div class="icon-box">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4 class="title-contact">WhatsApp</h4>
+                                <span class="contact-instan" data-lang="contact-text"></span>
+                            </div>
+                        </a>
+
+                        <a href="mailto:aadnanmtcontact@gmail.com" class="contact-item">
+                            <div class="icon-box">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4 class="title-contact">Email</h4>
+                                <span class="contact-instan">aadnanmtcontact@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <a href="https://t.me/aadnanmtech" target="_blank" rel="noopener noreferrer"
+                            class="contact-item">
+                            <div class="icon-box">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4 class="title-contact">Telegram</h4>
+                                <span class="contact-instan" data-lang="Telegram-Contact"></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact section end -->
+        <a href="hero" onclick="
                                         document
                                             .getElementById('hero')
                                             .scrollIntoView({
                                                 behavior: 'smooth',
                                             });
                                         return false;
-                                    "
-                >
-                  <span data-lang="home"></span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="about"
-                  onclick="
+                                    " class="top" aria-label="Go to top">
+            <i class="fa-solid fa-chevron-up"></i>
+        </a>
+    </main>
+    <!-- main end -->
+
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3 data-lang="Contact-Foot"></h3>
+                    <div class="footer-item">
+                        <i class="fas fa-map-marker-alt cyan"></i>
+                        <div>
+                            <p>Malang, Jawa Timur, Indonesia.</p>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <i class="fas fa-envelope cyan"></i>
+                        <p>aadnanmtcontact@gmail.com</p>
+                    </div>
+                    <div class="footer-item">
+                        <i class="fas fa-phone cyan"></i>
+                        <p>0851-7713-4033</p>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 data-lang="Instan-link"></h3>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="hero" onclick="
+                                        document
+                                            .getElementById('hero')
+                                            .scrollIntoView({
+                                                behavior: 'smooth',
+                                            });
+                                        return false;
+                                    ">
+                                <span data-lang="home"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about" onclick="
                                         document
                                             .getElementById('about')
                                             .scrollIntoView({
                                                 behavior: 'smooth',
                                             });
                                         return false;
-                                    "
-                >
-                  <span data-lang="profile"></span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="skills"
-                  onclick="
+                                    ">
+                                <span data-lang="profile"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="skills" onclick="
                                         document
                                             .getElementById('skills')
                                             .scrollIntoView({
                                                 behavior: 'smooth',
                                             });
                                         return false;
-                                    "
-                >
-                  <span data-lang="skills"></span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="projects"
-                  onclick="
+                                    ">
+                                <span data-lang="skills"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="projects" onclick="
                                         document
                                             .getElementById('projects')
                                             .scrollIntoView({
                                                 behavior: 'smooth',
                                             });
                                         return false;
-                                    "
-                >
-                  <span data-lang="projects"></span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="contact"
-                  onclick="
+                                    ">
+                                <span data-lang="projects"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact" onclick="
                                         document
                                             .getElementById('contact')
                                             .scrollIntoView({
                                                 behavior: 'smooth',
                                             });
                                         return false;
-                                    "
-                >
-                  <span data-lang="contact"></span>
-                </a>
-              </li>
-              <li>
-                <a href="/blog"><span data-lang="blog"></span></a>
-              </li>
-            </ul>
-          </div>
+                                    ">
+                                <span data-lang="contact"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/blog"><span data-lang="blog"></span></a>
+                        </li>
+                    </ul>
+                </div>
 
-          <div class="footer-column">
-            <h3 data-lang="build"></h3>
-            <div class="footer-stack">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span
-              ><span>Flask</span>
+                <div class="footer-column">
+                    <h3 data-lang="build"></h3>
+                    <div class="footer-stack">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Flask</span>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="https://github.com/aadnanmt" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit Github Adnan"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/adnan-slamet-wibowo-73906035b" target="_blank"
+                        rel="noopener noreferrer" aria-label="Visit LinkedIn Adnan"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/aadnanmt" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit X (Twitter) Adnan"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/aadnanmt" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit Instagram Adnan"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com/@aadnanmt" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit TikTok Adnan"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://open.spotify.com/user/314bjvthnpohaain54tchezpc4ji?si=7_MuMQsPTk2sGxhQrx44UQ"
+                        target="_blank" rel="noopener noreferrer" aria-label="Visit Spotify Adnan"><i
+                            class="fab fa-spotify"></i></a>
+                </div>
+                <p class="footer-credit">
+                    &copy; <span id="current-year"></span>
+                    <span data-lang="credit-craft"></span>
+                    <a href="https://github.com/aadnanmt" target="_blank" rel="noopener noreferrer" class="cyan"
+                        aria-label="Visit Github Adnan">Adnan</a>
+
+                    <span data-lang="underUnder"></span>
+
+                    <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer" class="cyan"
+                        data-lang="credit-license" aria-label="Visit Lisensi untuk Website Adnan"></a>
+                </p>
+            </div>
         </div>
-
-        <div class="footer-bottom">
-          <div class="social-icons">
-            <a
-              href="https://github.com/aadnanmt"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Github Adnan"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              href="https://linkedin.com/in/adnan-slamet-wibowo-73906035b"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit LinkedIn Adnan"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a
-              href="https://x.com/aadnanmt"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit X (Twitter) Adnan"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a
-              href="https://instagram.com/aadnanmt"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Instagram Adnan"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a
-              href="https://tiktok.com/@aadnanmt"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit TikTok Adnan"
-              ><i class="fab fa-tiktok"></i
-            ></a>
-            <a
-              href="https://open.spotify.com/user/314bjvthnpohaain54tchezpc4ji?si=7_MuMQsPTk2sGxhQrx44UQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Spotify Adnan"
-              ><i class="fab fa-spotify"></i
-            ></a>
-          </div>
-          <p class="footer-credit">
-            &copy; <span id="current-year"></span>
-            <span data-lang="credit-craft"></span>
-            <a
-              href="https://github.com/aadnanmt"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="cyan"
-              aria-label="Visit Github Adnan"
-              >Adnan</a
-            >
-
-            <span data-lang="underUnder"></span>
-
-            <a
-              href="https://opensource.org/licenses/MIT"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="cyan"
-              data-lang="credit-license"
-              aria-label="Visit Lisensi untuk Website Adnan"
-            ></a>
-          </p>
-        </div>
-      </div>
     </footer>
     <!-- footer end -->
 
     <!-- link/path javascript -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-  </body>
+</body>
+
 </html>

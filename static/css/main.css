@@ -934,6 +934,46 @@ body {
   font-weight: 700;
 }
 
+.top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: var(--border);
+  color: var(--cyan);
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.9);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.top i { 
+    font-size: 20px; 
+    transition: transform 0.3s ease;
+}
+
+.top:hover { 
+  background: var(--bg-dark);
+  color: var(--cyan);
+  border-color: var(--cyan);
+  transform: translateY(-5px) scale(1.1); 
+}
+
+.top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
 /* ====== MOBILE {Media Query} ====== */
 @media (max-width: 768px) {
   /* ----- Header & Nav ------ */
