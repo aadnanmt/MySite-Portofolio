@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 setTimeout(() => {
                     preloader.style.display = "none";
                 }, 500);
-            }, 1500);
+            }, 1000);
         });
     };
     handlePreloader();
