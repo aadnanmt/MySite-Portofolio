@@ -300,21 +300,62 @@ document.addEventListener("DOMContentLoaded", () => {
     const yearElement = document.getElementById("current-year");
     if (yearElement) yearElement.textContent = new Date().getFullYear();
 
-        const toTopButton = document.querySelector('.top');
+    const toTopButton = document.querySelector('.top');
 
-        window.addEventListener('scroll', function() {
-            const scrollHeight = document.documentElement.scrollHeight;
-            const clientHeight = document.documentElement.clientHeight;
-            const scrollTop = window.scrollY;
+    window.addEventListener('scroll', function () {
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = window.scrollY;
 
-            const triggerPoint = (scrollHeight - clientHeight) * 0.88;
+        const triggerPoint = (scrollHeight - clientHeight) * 0.88;
 
-            if (scrollTop > triggerPoint) {
-                
-                toTopButton.classList.add('show');
-            } else {
-                
-                toTopButton.classList.remove('show');
-            }
+        if (scrollTop > triggerPoint) {
+
+            toTopButton.classList.add('show');
+        } else {
+
+            toTopButton.classList.remove('show');
+        }
+    });
+});
+
+/* =========================================
+   AUTO COPY CODE BUTTON 📋
+   ========================================= */
+document.addEventListener('DOMContentLoaded', () => {
+    // Cari semua blok kode yang dihasilkan Pygments
+    const codeBlocks = document.querySelectorAll('.codehilite');
+
+    codeBlocks.forEach(block => {
+        // 1. Bikin Tombolnya
+        const btn = document.createElement('button');
+        btn.className = 'copy-btn';
+        btn.innerHTML = '<i class="far fa-copy"></i> Copy'; // Pake ikon kalau ada FontAwesome
+
+        // 2. Pasang Tombol ke dalam blok kode
+        block.appendChild(btn);
+
+        // 3. Logika Klik
+        btn.addEventListener('click', () => {
+            // Ambil teks asli dari dalam tag <pre>
+            const code = block.querySelector('pre').innerText;
+
+            // Salin ke Clipboard
+            navigator.clipboard.writeText(code).then(() => {
+                // Efek Visual Pas Sukses
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                btn.classList.add('copied');
+
+                // Balikin ke semula setelah 2 detik
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Gagal copy: ', err);
+                btn.innerHTML = 'Error!';
+            });
         });
+    });
 });

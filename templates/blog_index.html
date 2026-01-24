@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="blog-container">
+
+    <nav class="cmd-nav">
+        <a href="{{ url_for('main.home') }}" class="cmd-link">
+            <span class="cmd-prompt">cd ..</span>{Back to Home}
+        </a>
+    </nav>
+
+    <div class="blog-header-section">
+        <h1 class="terminal-title">ADNAN | BLOG<span class="blink">|</span></h1>
+        <p class="terminal-subtitle">Menjelajahi ilmu pengetahuan, sains, teknologi, kehidupan dari caraku meresponnya.</p>
+    </div>
+
+    <div class="posts-grid">
+        {% for post in posts %}
+        <article>
+            <a href="{{ url_for('main.blog_post', slug=post.slug) }}" class="log-entry-card">
+
+                <div class="entry-meta">
+                    <span>[{{ post.date }}]</span>
+                    <span>Adnan Slamet Wibowo</span>
+                </div>
+
+                <h2 class="entry-title">{{ post.title }}</h2>
+                <p class="entry-desc">{{ post.desc }}</p>
+
+                {% if post.tags %}
+                <div class="entry-tags">
+                    {% for tag in post.tags %}
+                    <span class="tag-chip">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </a>
+        </article>
+        {% endfor %}
+    </div>
+
+</section>
+{% endblock %}
