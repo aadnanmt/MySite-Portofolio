@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="blog-container">
+
+    <nav class="cmd-nav">
+        <a href="{{ url_for('main.blog_index') }}" class="cmd-link">
+            <span class="cmd-prompt"> cd ..</span> { back to blog }
+        </a>
+    </nav>
+
+    <header class="post-hero">
+        <div class="entry-tags" style="margin-bottom: 15px;">
+            {% for tag in post.tags %}
+            <span class="tag-chip" style="color: var(--cyan); border-color: var(--cyan);">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        
+        <h1 class="post-hero-title">{{ post.title }}</h1>
+        
+        <div class="entry-meta">
+            <span><i class="far fa-calendar"></i> {{ post.date }}</span>
+            <span><i class="far fa-user"></i> Adnan Slamet Wibowo</span>
+        </div>
+    </header>
+
+    <div class="blog-window">
+
+        <div class="window-bar">
+            <div class="window-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <span class="window-name">~/hypr/posts/{{ post.slug }}.md</span>
+        </div>
+
+        <div class="markdown-body">
+            {{ content | safe }}
+        </div>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 50px; opacity: 0.5;">
+        <p style="font-family: var(--font-code); font-size: 0.8rem;">
+            -- END OF FILE --
+        </p>
+    </div>
+
+</section>
+{% endblock %}
