@@ -3,7 +3,15 @@ from flask import Flask, request
 from flask_minify import Minify
 from route import main_bp # use main_bp, right now
 
-app = Flask(__name__, template_folder='../templates', static_folder='../static')
+# change to absolute path | start code
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+template_dir = os.path.join(base_dir, '..', 'templates')
+static_dir = os.path.join(base_dir, '..', 'static')
+
+app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
+
+# end code abolute path
 
 Minify(app=app, html=True, js=True, cssless=True)
 
