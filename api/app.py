@@ -6,6 +6,7 @@ from route import main_bp # use main_bp, right now
 
 # change to absolute path | start code
 base_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(base_dir)
 
 template_dir = os.path.join(base_dir, '..', 'templates')
 static_dir = os.path.join(base_dir, '..', 'static')
