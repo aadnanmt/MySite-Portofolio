@@ -1,19 +1,19 @@
 # api/app.py
 import os
+import sys
+
+# change to absolute path | start code | me, forget put
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(current_dir)
+
 from flask import Flask, request
 from flask_minify import Minify
-from route import main_bp # use main_bp, right now
+from route import main_bp  # use main_bp, right now
 
-# change to absolute path | start code
-base_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(base_dir)
-
-template_dir = os.path.join(base_dir, '..', 'templates')
-static_dir = os.path.join(base_dir, '..', 'static')
+template_dir = os.path.join(current_dir, '..', 'templates')
+static_dir = os.path.join(current_dir, '..', 'static')
 
 app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
-
-# end code abolute path
 
 Minify(app=app, html=True, js=True, cssless=True)
 
@@ -31,4 +31,4 @@ def add_header(response):
     return response
 
 if __name__ == '__main__':
-    app.run
+    app.run()
