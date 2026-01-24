@@ -1,0 +1,278 @@
+<!-- Crafted by Adnan Slamet -->
+<!-- Under MIT License -->
+
+<!doctype html>
+<html lang="en">
+<!-- head start -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>
+    Adnan Slamet Wibowo | Web Developer & Prompt Designer from Indonesia
+  </title>
+
+  <meta name="description"
+    content="Portfolio Adnan Slamet Wibowo. I am a Web Developer & Prompt Designer from Indonesia. Check out the latest creative projects and technological innovations." />
+  <meta name="keywords"
+    content="Adnan Slamet Wibowo, ATE, aadnanmt, Adnan, Web Developer in Indonesia, Prompt Designer, Linux Enthusiast, Adnan Portfolio" />
+  <meta name="author" content="Adnan Slamet Wibowo" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://aadnanmt.web.id/" />
+
+  <link rel="preload" href="{{ url_for('static', filename='img/me.webp') }}" as="image" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aadnanmt.web.id/" />
+  <meta property="og:title" content="Adnan Slamet Wibowo | Tech Enthusiast" />
+  <meta property="og:description"
+    content="Explore the crafts made by Adnan: Combination of code and human-like prompts" />
+  <meta property="og:image" content="{{ url_for('static', filename='img/me.jpg', _external=True) }}" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@aadnanmt" />
+  <meta name="twitter:creator" content="@aadnanmt" />
+  <meta name="twitter:title" content="Adnan Slamet Wibowo | Portfolio" />
+  <meta name="twitter:description"
+    content="Check out the portfolio of a young web developer and prompt designer from Indonesia." />
+  <meta name="twitter:image" content="{{ url_for('static', filename='img/me.jpg', _external=True) }}" />
+
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='svg/iconan.svg') }}" />
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='svg/iconan.svg') }}" />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- core design -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css', v='1.12') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css', v='1.12') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css', v='1.12') }}" />
+
+  <!-- fo /blog -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css', v='1.12') }}" />
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css') }}" />
+  <!-- for /blog -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/syntax.css') }}" />
+
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Adnan Slamet Wibowo",
+        "url": "https://aadnanmt.web.id",
+        "image": "https://aadnanmt.web.id/static/img/me.jpg",
+        "sameAs": [
+          "https://www.github.com/aadnanmt",
+          "https://www.linkedin.com/in/adnan-slamet-wibowo-73906035b",
+          "https://www.x.com/aadnanmt",
+          "https://www.instagram.com/aadnanmt",
+          "https://www.tiktok.com/aadnanmt"
+        ],
+        "jobTitle": "Web Developer & Prompt Designer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance / Open to Work"
+        },
+        "description": "I am a web developer. I specialize in modern web development. I also specialize in prompting artificial intelligence."
+      }
+    </script>
+</head>
+<!-- head end -->
+
+<!-- body start -->
+
+<body>
+  <header class="header">
+
+    <nav class="navbar glass-panel">
+
+      <a href="{{ url_for('main.home') }}" class="nav-logo" {% if request.endpoint=='main.home' %}
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;" {% endif %}>
+        A<span class="cyan">TEC</span>
+      </a>
+
+      <ul class="nav-menu">
+
+        <li>
+          <a href="{{ url_for('main.home') }}" class="nav-link" {% if request.endpoint=='main.home' %}
+            onclick="document.getElementById('hero').scrollIntoView({ behavior: 'smooth' }); return false;" {% endif %}>
+            <span data-lang="home"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('main.home', _anchor='about') }}" class="nav-link" {% if request.endpoint=='main.home' %}
+            onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' }); return false;" {% endif
+            %}>
+            <span data-lang="profile"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('main.home', _anchor='skills') }}" class="nav-link" {% if request.endpoint=='main.home' %}
+            onclick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth' }); return false;" {% endif
+            %}>
+            <span data-lang="skills"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('main.home', _anchor='projects') }}" class="nav-link" {% if request.endpoint=='main.home'
+            %} onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' }); return false;" {%
+            endif %}>
+            <span data-lang="projects"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('main.home', _anchor='contact') }}" class="nav-link" {% if request.endpoint=='main.home'
+            %} onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;" {%
+            endif %}>
+            <span data-lang="contact"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('main.blog_index') }}" class="nav-link">
+            <span data-lang="blog"></span>
+          </a>
+        </li>
+
+      </ul>
+
+      <div class="nav-extra">
+        <button id="lang-btn" class="lang-toggle-btn">ID</button>
+        <button id="canvas-btn" onclick="window.toggleParticleSystem()" class="lang-toggle-btn">ON</button>
+        <div class="hamburger bar-toggle">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </div>
+      </div>
+
+    </nav>
+  </header>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+<!-- footer start -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3 data-lang="Contact-Foot"></h3>
+        <div class="footer-item">
+          <i class="fas fa-map-marker-alt cyan"></i>
+          <div>
+            <p>Malang, Jawa Timur, Indonesia.</p>
+          </div>
+        </div>
+        <div class="footer-item">
+          <i class="fas fa-envelope cyan"></i>
+          <p>aadnanmtcontact@gmail.com</p>
+        </div>
+        <div class="footer-item">
+          <i class="fas fa-phone cyan"></i>
+          <p>0851-7713-4033</p>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-lang="Instan-link"></h3>
+        <ul class="footer-links">
+          <li>
+            <a href="hero" onclick="
+                    document.getElementById('hero').scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                    return false;
+                  ">
+              <span data-lang="home"></span>
+            </a>
+          </li>
+          <li>
+            <a href="about" onclick="
+                    document.getElementById('about').scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                    return false;
+                  ">
+              <span data-lang="profile"></span>
+            </a>
+          </li>
+          <li>
+            <a href="skills" onclick="
+                    document.getElementById('skills').scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                    return false;
+                  ">
+              <span data-lang="skills"></span>
+            </a>
+          </li>
+          <li>
+            <a href="projects" onclick="
+                    document.getElementById('projects').scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                    return false;
+                  ">
+              <span data-lang="projects"></span>
+            </a>
+          </li>
+          <li>
+            <a href="contact" onclick="
+                    document.getElementById('contact').scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                    return false;
+                  ">
+              <span data-lang="contact"></span>
+            </a>
+          </li>
+          <li>
+            <a href="/blog"><span data-lang="blog"></span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3 data-lang="build"></h3>
+        <div class="footer-stack">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Flask</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="social-icons">
+        <a href="https://github.com/aadnanmt" target="_blank" rel="noopener noreferrer"
+          aria-label="Visit Github Adnan"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/adnan-slamet-wibowo-73906035b" target="_blank" rel="noopener noreferrer"
+          aria-label="Visit LinkedIn Adnan"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/aadnanmt" target="_blank" rel="noopener noreferrer"
+          aria-label="Visit X (Twitter) Adnan"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/aadnanmt" target="_blank" rel="noopener noreferrer"
+          aria-label="Visit Instagram Adnan"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com/@aadnanmt" target="_blank" rel="noopener noreferrer"
+          aria-label="Visit TikTok Adnan"><i class="fab fa-tiktok"></i></a>
+        <a href="https://open.spotify.com/user/314bjvthnpohaain54tchezpc4ji?si=7_MuMQsPTk2sGxhQrx44UQ" target="_blank"
+          rel="noopener noreferrer" aria-label="Visit Spotify Adnan"><i class="fab fa-spotify"></i></a>
+      </div>
+      <p class="footer-credit">
+        &copy; <span id="current-year"></span>
+        <span data-lang="credit-craft"></span>
+        <a href="https://github.com/aadnanmt" target="_blank" rel="noopener noreferrer" class="cyan"
+          aria-label="Visit Github Adnan">Adnan</a>
+
+        <span data-lang="underUnder"></span>
+
+        <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer" class="cyan"
+          data-lang="credit-license" aria-label="Visit Lisensi untuk Website Adnan"></a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+</html>
