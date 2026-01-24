@@ -1,4 +1,5 @@
 # api/app.py
+import os
 from flask import Flask, request
 from flask_minify import Minify
 from route import main_bp # use main_bp, right now
