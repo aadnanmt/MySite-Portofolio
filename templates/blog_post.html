@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
+{% block title %}{{ post.title }} | Adnan Blog{% endblock %}
+
+{% block description %}{{ post.desc }}{% endblock %}
+
+{% block og_title %}{{ post.title }}{% endblock %}
+{% block og_description %}{{ post.desc }}{% endblock %}
+
 {% block content %}
 <section class="blog-container">
 
@@ -15,9 +22,9 @@
             <span class="tag-chip" style="color: var(--cyan); border-color: var(--cyan);">{{ tag }}</span>
             {% endfor %}
         </div>
-        
+
         <h1 class="post-hero-title">{{ post.title }}</h1>
-        
+
         <div class="entry-meta">
             <span><i class="far fa-calendar"></i> {{ post.date }}</span>
             <span><i class="far fa-user"></i> Adnan Slamet Wibowo</span>

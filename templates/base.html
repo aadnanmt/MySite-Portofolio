@@ -9,12 +9,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>
-    Adnan Slamet Wibowo | Web Developer & Prompt Designer from Indonesia
-  </title>
+
+  <title>{% block title %}Adnan Slamet Wibowo | Portfolio{% endblock %}</title>
 
   <meta name="description"
-    content="Portfolio Adnan Slamet Wibowo. I am a Web Developer & Prompt Designer from Indonesia. Check out the latest creative projects and technological innovations." />
+    content="{% block description %}Portfolio Adnan Slamet Wibowo. I am a Web Developer & Prompt Designer from Indonesia. Check out the latest creative projects and technological innovations.{% endblock %}" />
+
   <meta name="keywords"
     content="Adnan Slamet Wibowo, ATE, aadnanmt, Adnan, Web Developer in Indonesia, Prompt Designer, Linux Enthusiast, Adnan Portfolio" />
   <meta name="author" content="Adnan Slamet Wibowo" />
@@ -23,35 +23,34 @@
   <link rel="canonical" href="https://aadnanmt.web.id/" />
 
   <link rel="preload" href="{{ url_for('static', filename='img/me.webp') }}" as="image" />
+
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://aadnanmt.web.id/" />
-  <meta property="og:title" content="Adnan Slamet Wibowo | Tech Enthusiast" />
-  <meta property="og:description"
-    content="Explore the crafts made by Adnan: Combination of code and human-like prompts" />
+
+  <meta property="og:title" content="{% block og_title %}{{ self.title() }}{% endblock %}" />
+  <meta property="og:description" content="{% block og_description %}{{ self.description() }}{% endblock %}" />
+
   <meta property="og:image" content="{{ url_for('static', filename='img/me.jpg', _external=True) }}" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@aadnanmt" />
   <meta name="twitter:creator" content="@aadnanmt" />
-  <meta name="twitter:title" content="Adnan Slamet Wibowo | Portfolio" />
-  <meta name="twitter:description"
-    content="Check out the portfolio of a young web developer and prompt designer from Indonesia." />
+
+  <meta name="twitter:title" content="{{ self.og_title() }}" />
+  <meta name="twitter:description" content="{{ self.og_description() }}" />
+
   <meta name="twitter:image" content="{{ url_for('static', filename='img/me.jpg', _external=True) }}" />
 
   <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='svg/iconan.svg') }}" />
   <link rel="apple-touch-icon" href="{{ url_for('static', filename='svg/iconan.svg') }}" />
   <meta name="theme-color" content="#0a0a0a" />
 
-  <!-- core design -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css', v='1.12') }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css', v='1.12') }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css', v='1.12') }}" />
 
-  <!-- fo /blog -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css', v='1.12') }}" />
-  <!-- fontawesome -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css') }}" />
-  <!-- for /blog -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/syntax.css') }}" />
 
   <script type="application/ld+json">
@@ -141,8 +140,15 @@
       </ul>
 
       <div class="nav-extra">
-        <button id="lang-btn" class="lang-toggle-btn">ID</button>
-        <button id="canvas-btn" onclick="window.toggleParticleSystem()" class="lang-toggle-btn">ON</button>
+        <button id="lang-btn" class="lang-toggle-btn"
+          style="{% if request.path.startswith('/blog') %}display: none;{% endif %}">
+          ID
+        </button>
+
+        <button id="canvas-btn" onclick="window.toggleParticleSystem()" class="lang-toggle-btn"
+          style="{% if request.path.startswith('/blog') %}display: none;{% endif %}">
+          ON
+        </button>
         <div class="hamburger bar-toggle">
           <span class="bar"></span><span class="bar"></span><span class="bar"></span>
         </div>
@@ -182,57 +188,50 @@
         <h3 data-lang="Instan-link"></h3>
         <ul class="footer-links">
           <li>
-            <a href="hero" onclick="
-                    document.getElementById('hero').scrollIntoView({
-                      behavior: 'smooth',
-                    });
-                    return false;
-                  ">
+            <a href="{{ url_for('main.home') }}" {% if request.endpoint=='main.home' %}
+              onclick="document.getElementById('hero').scrollIntoView({ behavior: 'smooth' }); return false;" {% endif
+              %}>
               <span data-lang="home"></span>
             </a>
           </li>
+
           <li>
-            <a href="about" onclick="
-                    document.getElementById('about').scrollIntoView({
-                      behavior: 'smooth',
-                    });
-                    return false;
-                  ">
+            <a href="{{ url_for('main.home', _anchor='about') }}" {% if request.endpoint=='main.home'
+              %} onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' }); return false;" {%
+              endif %}>
               <span data-lang="profile"></span>
             </a>
           </li>
+
           <li>
-            <a href="skills" onclick="
-                    document.getElementById('skills').scrollIntoView({
-                      behavior: 'smooth',
-                    });
-                    return false;
-                  ">
+            <a href="{{ url_for('main.home', _anchor='skills') }}" {% if request.endpoint=='main.home'
+              %} onclick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth' }); return false;" {%
+              endif %}>
               <span data-lang="skills"></span>
             </a>
           </li>
+
           <li>
-            <a href="projects" onclick="
-                    document.getElementById('projects').scrollIntoView({
-                      behavior: 'smooth',
-                    });
-                    return false;
-                  ">
+            <a href="{{ url_for('main.home', _anchor='projects') }}" {% if
+              request.endpoint=='main.home' %}
+              onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' }); return false;" {%
+              endif %}>
               <span data-lang="projects"></span>
             </a>
           </li>
+
           <li>
-            <a href="contact" onclick="
-                    document.getElementById('contact').scrollIntoView({
-                      behavior: 'smooth',
-                    });
-                    return false;
-                  ">
+            <a href="{{ url_for('main.home', _anchor='contact') }}" {% if request.endpoint=='main.home'
+              %} onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;" {%
+              endif %}>
               <span data-lang="contact"></span>
             </a>
           </li>
+
           <li>
-            <a href="/blog"><span data-lang="blog"></span></a>
+            <a href="{{ url_for('main.blog_index') }}">
+              <span data-lang="blog"></span>
+            </a>
           </li>
         </ul>
       </div>

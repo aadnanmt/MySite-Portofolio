@@ -84,6 +84,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 this.canvas.classList.add("canvas-hidden");
             }
             this.updateButtonUI();
+            if (window.location.pathname.startsWith('/blog')) {
+                console.log("Blog detected: Particles disabled for performance.");
+                return
+            }
 
             // Event Listeners
             window.addEventListener("resize", () => {
@@ -169,7 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 this.canvas.classList.add("canvas-hidden");
                 cancelAnimationFrame(this.animationId);
             }
-            this.updateButtonUI();
         }
 
         updateButtonUI() {
@@ -319,43 +322,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-/* =========================================
-   AUTO COPY CODE BUTTON 📋
-   ========================================= */
+
+// COPY BTN
 document.addEventListener('DOMContentLoaded', () => {
-    // Cari semua blok kode yang dihasilkan Pygments
+
     const codeBlocks = document.querySelectorAll('.codehilite');
 
     codeBlocks.forEach(block => {
-        // 1. Bikin Tombolnya
+        // create btn
         const btn = document.createElement('button');
         btn.className = 'copy-btn';
-        btn.innerHTML = '<i class="far fa-copy"></i> Copy'; // Pake ikon kalau ada FontAwesome
+        btn.innerHTML = '<i class="far fa-copy"></i> Copy';
 
-        // 2. Pasang Tombol ke dalam blok kode
         block.appendChild(btn);
 
-        // 3. Logika Klik
+        // Logic click
         btn.addEventListener('click', () => {
-            // Ambil teks asli dari dalam tag <pre>
             const code = block.querySelector('pre').innerText;
 
-            // Salin ke Clipboard
+            // Copy in clipboard
             navigator.clipboard.writeText(code).then(() => {
-                // Efek Visual Pas Sukses
+
                 const originalText = btn.innerHTML;
                 btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
                 btn.classList.add('copied');
 
-                // Balikin ke semula setelah 2 detik
+                // disable error copy
                 setTimeout(() => {
                     btn.innerHTML = originalText;
                     btn.classList.remove('copied');
-                }, 2000);
-            }).catch(err => {
-                console.error('Gagal copy: ', err);
-                btn.innerHTML = 'Error!';
-            });
+                }, 2500);
+            })
         });
     });
 });
