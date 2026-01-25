@@ -55,8 +55,13 @@
   }
 
   /* ----- Hero Section ------ */
+  .status {
+  padding: 6px 12px;
+  font-size: .65rem;
+}
+
   .hero-content h1 {
-    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+    font-size: clamp(1.2rem, 1.8vw, 1.5rem);
   }
 
   .hero-subtitle {
