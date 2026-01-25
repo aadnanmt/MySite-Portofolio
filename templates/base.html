@@ -11,10 +11,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <title>{% block title %}Adnan Slamet Wibowo | Portfolio{% endblock %}</title>
-
+  <!-- seo -->
   <meta name="description"
     content="{% block description %}Portfolio Adnan Slamet Wibowo. I am a Web Developer & Prompt Designer from Indonesia. Check out the latest creative projects and technological innovations.{% endblock %}" />
-
+  
   <meta name="keywords"
     content="Adnan Slamet Wibowo, ATE, aadnanmt, Adnan, Web Developer in Indonesia, Prompt Designer, Linux Enthusiast, Adnan Portfolio" />
   <meta name="author" content="Adnan Slamet Wibowo" />
@@ -24,6 +24,7 @@
 
   <link rel="preload" href="{{ url_for('static', filename='img/me.webp') }}" as="image" />
 
+  <!-- seo -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://aadnanmt.web.id/" />
 
@@ -41,15 +42,19 @@
 
   <meta name="twitter:image" content="{{ url_for('static', filename='img/me.jpg', _external=True) }}" />
 
+  <!-- icon head -->
   <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='svg/iconan.svg') }}" />
   <link rel="apple-touch-icon" href="{{ url_for('static', filename='svg/iconan.svg') }}" />
   <meta name="theme-color" content="#0a0a0a" />
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css', v='1.12') }}" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css', v='1.12') }}" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css', v='1.12') }}" />
+  <!-- initial style website -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css', v='1.13') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css', v='1.13') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css', v='1.13') }}" />
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css', v='1.12') }}" />
+  <!-- for /blog -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css', v='1.13') }}" />
+  <!-- package from font awesome-->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css') }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/syntax.css') }}" />
 
