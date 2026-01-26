@@ -1,6 +1,6 @@
 /* --- CONFIG & LAYOUT --- */
 .blog-container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 120px 20px 80px;
   min-height: 100vh;
@@ -243,6 +243,11 @@
 
 /* Code Blocks */
 .markdown-body pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
   background: var(--glass) !important;
   padding: 20px;
   overflow-x: auto;
@@ -332,8 +337,8 @@
     padding-right: 15px;
   }
   .markdown-body {
-    padding: 20px;
-    font-size: 1rem;
+    padding: 30px;
+    font-size: .8rem;
   }
   .posts-grid {
     gap: 20px;
