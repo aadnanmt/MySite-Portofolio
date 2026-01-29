@@ -59,8 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Config
             this.config = {
-                color: "rgba(0, 240, 255, 0.8)",
-                lineColor: "rgba(0, 240, 255, 0.15)",
+                color: window.innerWidth < 768 ? "rgba(0, 240, 255, 1.0)" : "rgba(0, 240, 255, 0.8)",
+                lineColor: window.innerWidth < 768 ? "rgba(0, 240, 255, 0.4)" : "rgba(0, 240, 255, 0.15)",
                 count: window.innerWidth < 768 ? 30 : 60,
                 range: window.innerWidth < 768 ? 100 : 190,
                 speed: 0.5
