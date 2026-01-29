@@ -1,6 +1,6 @@
 ---
 title: "Git : Mesin Waktu untuk Para Developer"
-date: "2026-01-26"
+date: "2026-01-29"
 desc: "Panduan fundamental dalam menguasai Version Control. Amankan kode, lacak perubahan, dan kolaborasi tanpa takut konflik."
 tags: ["version-control", "git", "engineering"]
 ---
