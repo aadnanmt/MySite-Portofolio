@@ -22,6 +22,11 @@
 
   text-transform: uppercase;
   transition: all 0.3s ease;
+
+  @include mobile {
+    padding: 6px 12px;
+    font-size: .65rem;
+  }
 }
 
 .status:hover {
@@ -42,6 +47,10 @@
   line-height: 1.1;
   margin-bottom: 10px;
   text-transform: uppercase;
+
+  @include mobile {
+    font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  }
 }
 
 .hero-subtitle {
@@ -49,6 +58,10 @@
   font-size: 1.1rem;
   color: var(--text-muted);
   margin-bottom: 30px;
+
+  @include mobile {
+    font-size: 0.8rem;
+  }
 }
 
 #typing-text {
@@ -70,17 +83,26 @@
   gap: 20px;
   justify-content: center;
   margin-bottom: 30px;
+
+  @include mobile {
+    flex-direction: column;
+  }
 }
 
 .btn-primary,
 .btn-secondary {
   padding: 12px 30px;
-
   font-family: var(--font-head);
   font-size: 0.8rem;
   font-weight: 700;
   text-decoration: none;
   transition: 0.3s;
+
+  @include mobile {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
 }
 
 .btn-primary {
