@@ -5,6 +5,10 @@
 
 .mt-large {
   margin-top: 80px;
+
+  @include mobile {
+    margin-top: 40px;
+  }
 }
 
 #particle-canvas {
@@ -99,6 +103,10 @@
   font-family: var(--font-head);
   color: #fff;
   font-size: 1.8rem;
+
+  @include mobile {
+    font-size: 1.3rem;
+  }
 }
 
 .line {
