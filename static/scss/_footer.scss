@@ -1,0 +1,120 @@
+/* ======== FOOTER ======= */
+.footer {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-muted);
+  font-family: var(--font-code);
+  font-size: 0.8rem;
+  border-top: var(--border);
+  margin-top: 80px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-column h3 {
+  font-family: var(--font-head);
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  border-left: 3px solid var(--cyan);
+  padding-left: 10px;
+}
+
+.footer-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.footer-item i {
+  margin-top: 5px;
+  color: var(--cyan);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--cyan);
+  transform: translateX(5px);
+}
+
+.footer-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-stack span {
+  background: rgb(255 255 255 / 0.05);
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  border: 1px solid #fff0;
+  transition: 0.3s;
+  font-family: var(--font-code);
+}
+
+.footer-stack span:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgb(255 255 255 / 0.05);
+  padding-top: 30px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  color: var(--text-muted);
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--cyan);
+  transform: translateY(-3px) scale(1.1);
+}
+
+.footer-credit {
+  font-size: 0.85rem;
+  font-family: var(--font-code);
+}
+
+.footer-credit a {
+  text-decoration: none;
+  font-weight: 700;
+}

@@ -1,0 +1,120 @@
+/* ======= HERO SECTION START ======== */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.status {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  font-family: var(--font-code);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  background: rgb(0 240 255 / 0.05);
+
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.status:hover {
+  background: rgb(0 240 255 / 0.1);
+
+  transform: translateY(-2px);
+  cursor: default;
+}
+
+.status i {
+  margin-right: 8px;
+  filter: drop-shadow(0 0 5px var(--cyan));
+}
+
+.hero-content h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2.5rem, 3.8vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  font-family: var(--font-code);
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+#typing-text {
+  color: var(--cyan);
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 30px;
+
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: var(--cyan);
+  color: #000;
+  border: 1px solid var(--cyan);
+}
+
+.btn-secondary {
+  background: #fff0;
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: scale(1.05);
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--cyan);
+  transform: translateY(-3px);
+}
+
+/* ====== HERO SECTION END =========*/
