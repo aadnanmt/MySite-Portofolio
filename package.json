@@ -1,0 +1,25 @@
+{
+  "name": "mysite-portofolio",
+  "version": "1.0.0",
+  "description": "The site is built with a focus on performance, interactivity, and a modern and aesthetic. ",
+  "main": "index.js",
+  "scripts": {
+  "sass-watch": "sass --watch static/scss:static/css --style compressed --silence-deprecation=import",
+  "sass-build": "sass static/scss:static/css --style compressed --no-source-map --silence-deprecation=import"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aadnanmt/MySite-Portofolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/aadnanmt/MySite-Portofolio/issues"
+  },
+  "homepage": "https://github.com/aadnanmt/MySite-Portofolio#readme",
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}
