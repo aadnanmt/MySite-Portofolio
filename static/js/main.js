@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("System Initialized... [Optimized Mode]");
+    console.log("System Initialized...");
 
     // ===== PRELOADER MANAGER =======
     const handlePreloader = () => {
@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "Web Developer",
             "Prompt Designer",
             "Problem Solver",
-            "Penetration Tester",
+            "Security Enthusiast",
             "Reverse Engineer",
             "Linux Enthusiast",
         ]);
