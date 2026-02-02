@@ -1,0 +1,25 @@
+:root {
+  /* --- MAIN COLORS --- */
+  --bg-dark: #050508;
+  --cyan: #00f0ff;
+  --green: #00ff00;
+  --purple: #7000ff;
+  --red: #ff5f56;  
+  --yellow: #ffbd2e;
+  --white: #ffffff;
+  
+  /* --- TEXT --- */
+  --text-main: #ffffff;
+  --text-muted: #8b9bb4;
+  
+  /* --- UTILITIES --- */
+  --glass: rgba(15, 15, 22, 0.6);
+  --border: 1px solid rgba(0, 240, 255, 0.2);
+  --border-dim: rgba(255, 255, 255, 0.1);
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  
+  /* --- FONTS --- */
+  --font-head: "Syncopate", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+  --font-code: "JetBrains Mono", monospace;
+}

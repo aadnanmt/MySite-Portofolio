@@ -1,9 +1,30 @@
-// Utilities
-@import 'utils';
-@import 'mixins';
+/* main.scss
+   Crafted by aadnanmt
+*/
 
-// Components
-@import 'header';
-@import 'hero';
-@import 'content';
-@import 'footer';
+// =========================================
+// ABSTRACTS
+
+@import 'abstracts/variabels'; 
+@import 'abstracts/mixins';
+@import 'abstracts/utils';
+
+// ======================
+// BASE
+
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/global';
+
+// =======================
+// COMPONENTS
+
+@import 'components/header';
+@import 'components/hero';
+@import 'components/content';
+@import 'components/footer';
+
+// ========================
+// PAGES
+@import 'pages/blog-index';
+@import 'pages/blog-posts'

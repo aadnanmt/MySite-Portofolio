@@ -1,0 +1,123 @@
+/* ==== BLOG INDEX == */
+
+
+/* Main container */
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px 80px;
+  min-height: 100vh;
+}
+
+/* Header page blog */
+.blog-header-section {
+  margin-bottom: 60px;
+  border-bottom: var(--border);
+  padding-bottom: 20px;
+}
+
+.blog-title {
+  font-family: var(--font-code);
+  font-size: 2.5rem;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.blog-subtitle {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* Grid layout card */
+.posts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* Design card */
+.log-entry-card {
+  display: block;
+  text-decoration: none;
+  background: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effect hover car */
+.log-entry-card:hover {
+  transform: translateX(8px);
+  border-color: var(--cyan);
+  background: rgba(0, 240, 255, 0.02);
+}
+
+.log-entry-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--cyan);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.log-entry-card:hover::before {
+  transform: scaleY(1);
+}
+
+/* Typography on card */
+.entry-meta {
+  font-family: var(--font-code);
+  font-size: 0.8rem;
+  color: var(--cyan);
+  margin-bottom: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.entry-title {
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  color: var(--white);
+  margin-bottom: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.entry-desc {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.entry-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag-chip {
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Responsive blog index */
+@media (max-width: 768px) {
+  .posts-grid {
+    gap: 20px;
+  }
+  .log-entry-card {
+    padding: 20px;
+  }
+}

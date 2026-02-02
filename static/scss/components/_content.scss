@@ -3,6 +3,11 @@
   grid-template-columns: 1fr 2fr;
   gap: 40px;
   align-items: left;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
 }
 
 .profile-wrapper {
@@ -10,6 +15,13 @@
   width: 300px;
   aspect-ratio: 1 / 1;
   margin: 20px;
+
+  @include mobile {
+    width: 220px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .profile-img {
@@ -33,6 +45,12 @@
   transform: scale(1.1);
   z-index: 1;
   filter: contrast(1.2);
+}
+
+@include mobile {
+  .img-border {
+    height: 95%;
+  }
 }
 
 .profile-wrapper:hover .img-main {
@@ -95,6 +113,10 @@
   font-size: 0.85rem;
   color: var(--white);
   margin-left: 10px;
+
+  @include mobile {
+    font-size: 0.8rem;
+  }
 }
 
 .about-text span {
@@ -114,10 +136,20 @@
   margin-bottom: 20px;
 }
 
+@include mobile {
+  .skill-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .tools-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+
+  @include mobile {
+    justify-content: center;
+  }
 }
 
 .tool-item {
@@ -127,10 +159,15 @@
   justify-content: center;
   background: rgb(255 255 255 / 0.05);
   padding: 15px;
-
   min-width: 150px;
   border: 1px solid #fff0;
   transition: 0.3s;
+
+  @include mobile {
+    width: 80px;
+    height: 80px;
+    min-width: 30px;
+  }
 }
 
 .tool-item i {
@@ -138,12 +175,20 @@
   margin-bottom: 10px;
   color: var(--text-muted);
   transition: 0.3s;
+
+  @include mobile {
+    font-size: 1.6rem;
+  }
 }
 
 .tool-item span {
   font-size: 1rem;
   font-family: var(--font-code);
   color: var(--text-muted);
+
+  @include mobile {
+    font-size: 0.6rem;
+  }
 }
 
 .tool-item:hover {
@@ -296,10 +341,19 @@
   gap: 40px;
   align-items: start;
   margin-top: 40px;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
 }
 
 .contact-form-wrapper {
   height: 100%;
+
+  @include mobile {
+    padding: 20px;
+  }
 }
 
 .contact-form-wrapper label {
@@ -356,12 +410,22 @@
   font-size: 0.9rem;
   margin-bottom: 20px;
   letter-spacing: 1px;
+
+  @include mobile {
+    text-align: center;
+    margin-bottom: 15px;
+  }
 }
 
 .contact-detail {
   display: flex;
   flex-direction: column;
   gap: 15px;
+
+  @include mobile {
+    margin: 0;
+    padding: 20px;
+  }
 }
 
 .contact-item {
@@ -413,4 +477,8 @@
   color: var(--text-muted);
   font-family: var(--font-code);
   font-size: 0.9rem;
+
+  @include mobile {
+    font-size: 0.78rem;
+  }
 }
