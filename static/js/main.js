@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
         async init() {
             // Load data once
             try {
-                const response = await fetch("/static/lang/language.json?v=1.1");
+                const response = await fetch("/static/lang/language.json?v=" + new Date().getTime());
                 this.data = await response.json();
                 this.applyLanguage(this.currentLang);
             } catch (error) {
