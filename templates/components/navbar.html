@@ -1,0 +1,75 @@
+<header class="header">
+
+    <nav class="navbar glass-panel">
+
+      <a href="{{ url_for('main.home') }}" class="nav-logo" {% if request.endpoint=='main.home' %}
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;" {% endif %}>
+        A<span class="cyan">TEC</span>
+      </a>
+
+      <ul class="nav-menu">
+
+        <li>
+          <a href="{{ url_for('main.home') }}" class="nav-link" {% if request.endpoint=='main.home' %}
+            onclick="document.getElementById('hero').scrollIntoView({ behavior: 'smooth' }); return false;" {% endif %}>
+            <span data-lang="home"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('main.home', _anchor='about') }}" class="nav-link" {% if request.endpoint=='main.home' %}
+            onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' }); return false;" {% endif
+            %}>
+            <span data-lang="profile"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('main.home', _anchor='skills') }}" class="nav-link" {% if request.endpoint=='main.home' %}
+            onclick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth' }); return false;" {% endif
+            %}>
+            <span data-lang="skills"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('main.home', _anchor='projects') }}" class="nav-link" {% if request.endpoint=='main.home'
+            %} onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' }); return false;" {%
+            endif %}>
+            <span data-lang="projects"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('main.home', _anchor='contact') }}" class="nav-link" {% if request.endpoint=='main.home'
+            %} onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;" {%
+            endif %}>
+            <span data-lang="contact"></span>
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ url_for('main.blog_index') }}" class="nav-link">
+            <span data-lang="blog"></span>
+          </a>
+        </li>
+
+      </ul>
+
+      <div class="nav-extra">
+        <button id="lang-btn" class="lang-toggle-btn"
+          style="{% if request.path.startswith('/blog') %}display: none;{% endif %}">
+          ID
+        </button>
+
+        <button id="canvas-btn" onclick="window.toggleParticleSystem()" class="lang-toggle-btn"
+          style="{% if request.path.startswith('/blog') %}display: none;{% endif %}">
+          ON
+        </button>
+        <div class="hamburger bar-toggle">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </div>
+      </div>
+
+    </nav>
+  </header>
