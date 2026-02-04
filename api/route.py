@@ -11,13 +11,13 @@ main_bp = Blueprint('main', __name__)
 # app.route --> main_bp.route
 @main_bp.route('/')
 def home():
-    return render_template('main.html')
+    return render_template('layouts/base.html')
 
 # blog page
 @main_bp.route('/blog')
 def blog_index():
     posts = get_posts_cached(current_app.root_path) 
-    return render_template('blog_index.html', posts=posts)
+    return render_template('pages/blog/blog_index.html', posts=posts)
 
 @main_bp.route('/blog/<slug>')
 def blog_post(slug):
@@ -34,5 +34,5 @@ def blog_post(slug):
             extensions=['fenced_code', 'codehilite', 'tables', 'attr_list']
         )
         
-    return render_template('blog_post.html', post=post, content=content)
+    return render_template('pages/blog/blog_post.html', post=post, content=content)
     pass
