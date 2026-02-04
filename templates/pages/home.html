@@ -1,17 +1,17 @@
-{% extends 'layouts/base.html' %}
+{% extends "layouts/base.html" %}
 
 {% block content %}
 
-    {% include 'components/hero.html' %}
-    {% include 'components/about.html' %}
-    {% include 'components/skills.html' %}
-    {% include 'components/projects.html' %}
-    {% include 'components/contact.html' %}
+    {% include "components/hero.html" %}
+    {% include "components/about.html" %}
+    {% include "components/skills.html" %}
+    {% include "components/projects.html" %}
+    {% include "components/contact.html" %}
 
   
   <a href="hero" onclick="
-          document.getElementById('hero').scrollIntoView({
-            behavior: 'smooth',
+          document.getElementById("hero").scrollIntoView({
+            behavior: "smooth",
           });
           return false;
         " class="top" aria-label="Go to top">
