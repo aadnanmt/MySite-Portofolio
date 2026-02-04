@@ -12,7 +12,7 @@
 
 This repository contains the source code for my personal portfolio website. It is designed to showcase my projects, skills, and experience as a **Web Developer** and **Prompt Designer**.
 
-The site is built with a focus on performance, interactivity, and a modern "Cyberpunk/Glassmorphism" aesthetic. It features a bilingual system (Indonesian/English) managed via JSON.
+The site is built with a focus on performance, interactivity, and a modern "Cyberpunk/Cyan" aesthetic. It features a bilingual system (Indonesian/English) managed via JSON.
 
 **Live Demo:** [https://www.aadnanmt.web.id](https://www.aadnanmt.web.id)
 
