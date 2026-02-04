@@ -1,20 +1,13 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-
+    
+    {% include 'components/loader.html' %}
+    {% include 'components/background.html' %}
     {% include "components/hero.html" %}
     {% include "components/about.html" %}
     {% include "components/skills.html" %}
     {% include "components/projects.html" %}
     {% include "components/contact.html" %}
 
-  
-  <a href="hero" onclick="
-          document.getElementById("hero").scrollIntoView({
-            behavior: "smooth",
-          });
-          return false;
-        " class="top" aria-label="Go to top">
-    <i class="fa-solid fa-chevron-up"></i>
-  </a>
 {% endblock %}

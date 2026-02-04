@@ -68,40 +68,6 @@
     <!-- body start -->
     <body>
         {% include 'components/navbar.html' %}
-        <!-- preload start -->
-        <div id="preloader">
-            <div class="loader-content">
-                <div class="scanner-ring">
-                </div>
-                <div class="loading-text">
-                    INITIALIZING SYSTEM...
-                </div>
-                <div class="terminal-log">
-                    <p>
-                        >_ Loading kernel 19.10.2007-amd64...
-                    </p>
-                    <p>
-                        >_ Loading initial ramdisk...
-                    </p>
-                    <p>
-                        >_ Mounting sysroot...
-                    </p>
-                    <p>
-                        >_ Mounting /dev/sda2...
-                    </p>
-                    <p>
-                        >_ Starting interface...
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- preload end -->
-        <!-- canvas -->
-        <canvas id="particle-canvas">
-        </canvas>
-        <!-- bg -->
-        <div class="bg-overlay">
-        </div>
         <main>
             {% block content %}{% endblock %}
         </main>
