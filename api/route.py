@@ -8,10 +8,13 @@ import frontmatter
 # make blueprint
 main_bp = Blueprint('main', __name__)
 
-# app.route --> main_bp.route
+@main_bp.errorhandler(404)
+def not_found_error(error):
+    return render_template('pages/errors/404.html'), 404
+    
 @main_bp.route('/')
 def home():
-    return render_template('layouts/base.html')
+    return render_template('pages/home.html')
 
 # blog page
 @main_bp.route('/blog')
