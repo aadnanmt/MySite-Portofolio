@@ -32,45 +32,53 @@
                 <h3 data-lang="Instan-link">
                 </h3>
                 <ul class="footer-links">
-                    <ul class="nav-menu">
-                        <li>
-                            <a class="nav-link" href="{{ url_for('main.home') }}">
-                                <span data-lang="home">
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="{{ url_for('main.home', _anchor='about') }}">
-                                <span data-lang="profile">
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="{{ url_for('main.home', _anchor='skills') }}">
-                                <span data-lang="skills">
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="{{ url_for('main.home', _anchor='projects') }}">
-                                <span data-lang="projects">
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="{{ url_for('main.home', _anchor='contact') }}">
-                                <span data-lang="contact">
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="{{ url_for('blog.index') }}">
-                                <span data-lang="blog">
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </ul>
+          <li>
+            <a href="{{ url_for('main.home') }}" {% if request.endpoint=='main.home' %}
+              onclick="document.getElementById('hero').scrollIntoView({ behavior: 'smooth' }); return false;" {% endif
+              %}>
+              <span data-lang="home"></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('main.home', _anchor='about') }}" {% if request.endpoint=='main.home'
+              %} onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' }); return false;" {%
+              endif %}>
+              <span data-lang="profile"></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('main.home', _anchor='skills') }}" {% if request.endpoint=='main.home'
+              %} onclick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth' }); return false;" {%
+              endif %}>
+              <span data-lang="skills"></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('main.home', _anchor='projects') }}" {% if
+              request.endpoint=='main.home' %}
+              onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' }); return false;" {%
+              endif %}>
+              <span data-lang="projects"></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('main.home', _anchor='contact') }}" {% if request.endpoint=='main.home'
+              %} onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;" {%
+              endif %}>
+              <span data-lang="contact"></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="{{ url_for('main.blog_index') }}">
+              <span data-lang="blog"></span>
+            </a>
+          </li>
+        </ul>
             </div>
             <div class="footer-column">
                 <h3 data-lang="build">
