@@ -6,7 +6,7 @@ from functools import lru_cache
 # processing markdown to HTML
 @lru_cache(maxsize=1)
 def get_posts_cached(root_path):
-    post_folder = os.path.join(root_path, 'api/posts')
+    post_folder = os.path.join(root_path, 'posts')
 
     posts = []
     
