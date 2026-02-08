@@ -6,14 +6,11 @@ from functools import lru_cache
 # processing markdown to HTML
 @lru_cache(maxsize=1)
 def get_posts_cached(root_path):
-    post_folder = os.path.join(root_path, 'posts')
+    post_folder = os.path.join(root_path, 'api/posts')
 
-    print(f"root path asliny: {root_path}")
-    print(f"be nyari folder posts di: {post_folder}")
     posts = []
     
     if not os.path.exists(post_folder):
-        print("hasil debug: folder missing")
         return []
 
     for filename in os.listdir(post_folder):
