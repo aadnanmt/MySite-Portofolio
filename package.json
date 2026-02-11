@@ -4,6 +4,9 @@
   "description": "The site is built with a focus on performance, interactivity, and a modern and aesthetic. ",
   "main": "index.js",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    
     "sass-w": "sass --watch static/scss:static/css --style compressed --silence-deprecation=import",
     "sass-b": "sass static/scss:static/css --style compressed --no-source-map --silence-deprecation=import"
   },
