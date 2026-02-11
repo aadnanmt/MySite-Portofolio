@@ -13,10 +13,10 @@ from api.security.headers import security_headers
 from api.routes.home import main_bp
 from api.routes.blog import blog_bp
 
-template_dir = os.path.join(current_dir, 'templates')
+template_directory = os.path.join(current_dir, 'templates')
 static_dir = os.path.join(current_dir, 'static')
 
-app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
+app = Flask(__name__, template_folder=template_directory, static_folder=static_dir)
 
 Minify(app=app, html=True, js=True, cssless=True)
 
