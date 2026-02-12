@@ -1,0 +1,20 @@
+{
+  "frontend/js/main.js": {
+    "file": "assets/script-Dg2tTbMS.js",
+    "name": "script",
+    "src": "frontend/js/main.js",
+    "isEntry": true,
+    "css": [
+      "assets/style-DuvMlqMg.css"
+    ]
+  },
+  "frontend/scss/main.scss": {
+    "file": "assets/style-DuvMlqMg.css",
+    "src": "frontend/scss/main.scss",
+    "isEntry": true,
+    "name": "style",
+    "names": [
+      "style.css"
+    ]
+  }
+}
