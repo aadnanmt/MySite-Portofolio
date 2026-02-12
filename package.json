@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "sass-w": "sass --watch static/scss:static/css --style compressed --silence-deprecation=import",
-    "sass-b": "sass static/scss:static/css --style compressed --no-source-map --silence-deprecation=import"
+    "build": "vite build"
   },
   "repository": {
     "type": "git",
