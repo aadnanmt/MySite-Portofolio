@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    
     "sass-w": "sass --watch static/scss:static/css --style compressed --silence-deprecation=import",
     "sass-b": "sass static/scss:static/css --style compressed --no-source-map --silence-deprecation=import"
   },
@@ -23,7 +22,6 @@
   },
   "homepage": "https://github.com/aadnanmt/MySite-Portofolio#readme",
   "devDependencies": {
-    "sass": "^1.97.3",
     "vite": "^7.3.1"
   }
 }
