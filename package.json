@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently \"npm run vite\" \"npm run flask\" --kill-others --prefix-colors \"cyan,yellow\"",
     "vite": "vite",
-    "flask": "source venv/bin/activate && python app.py",
+    "flask": "source venv/bin/activate && flask run",
     "build": "vite build",
     "preview": "vite preview"
   },
