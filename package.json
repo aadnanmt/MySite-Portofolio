@@ -4,8 +4,11 @@
   "description": "The site is built with a focus on performance, interactivity, and a modern and aesthetic. ",
   "main": "index.js",
   "scripts": {
-  "sass-w": "sass --watch static/scss:static/css --style compressed --silence-deprecation=import",
-  "sass-b": "sass static/scss:static/css --style compressed --no-source-map --silence-deprecation=import"
+    "dev": "concurrently \"npm run vite\" \"npm run flask\" --kill-others --prefix-colors \"cyan,yellow\"",
+    "vite": "vite",
+    "flask": "source venv/bin/activate && flask run",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -20,6 +23,8 @@
   },
   "homepage": "https://github.com/aadnanmt/MySite-Portofolio#readme",
   "devDependencies": {
-    "sass": "^1.97.3"
+    "concurrently": "^9.2.1",
+    "sass-embedded": "^1.97.3",
+    "vite": "^7.3.1"
   }
 }

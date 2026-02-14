@@ -33,13 +33,14 @@
         <link href="{{ url_for('static', filename='svg/iconan.svg') }}" rel="icon" type="image/svg+xml"/>
         <link href="{{ url_for('static', filename='svg/iconan.svg') }}" rel="apple-touch-icon"/>
         <meta content="#0a0a0a" name="theme-color"/>
-        <!-- initial style website -->
-        <link href="{{ url_for('static', filename='css/main.css', v='1.14') }}" rel="stylesheet"/>
+        <!-- tag js and scss -->
+        {{vite_asset('frontend/js/main.js')}}
         <!-- for /blog | soon -->
         <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/blog-index.css', v='1.1') }}" /> -->
         <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/blog-posts.css', v='1.1') }}" /> -->
         <!-- package from font awesome-->
         <link href="{{ url_for('static', filename='css/all.css') }}" rel="stylesheet"/>
+        <!-- style syntax from package python-->
         <link href="{{ url_for('static', filename='css/syntax.css') }}" rel="stylesheet"/>
         <script type="application/ld+json">
             {
@@ -71,8 +72,6 @@
         <main>
             {% block content %}{% endblock %}
         </main>
-        <script src="{{ url_for('static', filename='js/main.js', v='1.1') }}">
-        </script>
     </body>
     {% include 'components/footer.html' %}
 </html>
