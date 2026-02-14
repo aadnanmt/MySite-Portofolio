@@ -9,10 +9,10 @@ sys.path.append(current_directory)
 from flask import Flask, request
 from flask_minify import Minify
 
-from api.security.headers import security_headers
-from api.routes.home import main_bp
-from api.routes.blog import blog_bp
-from api.utility.vite_app import init_vite
+from backend.security.headers import security_headers
+from backend.routes.home import main_bp
+from backend.routes.blog import blog_bp
+from backend.utility.vite_app import init_vite
 
 template_directory = os.path.join(current_directory, 'templates')
 static_directory = os.path.join(current_directory, 'static')
