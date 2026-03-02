@@ -16,7 +16,7 @@ def build_css():
     )
     with open(CSS_OUTPUT, 'w', encoding='utf-8') as f:
         f.write(compiled)
-    print(f"[build] css compiled --> static/css/main.css")
+    print(f"[build] CSS compiled --> static/css/main.css")
 
 if __name__ == '__main__':
     build_css()
