@@ -61,7 +61,7 @@
     width: 100%;
     height: 0;
     overflow: hidden;
-    background: rgb(5 5 8 / 0.98);
+    background: rgba(5, 5, 8, 0.98);
     flex-direction: column;
     align-items: center;
     transition: 0.4s;
@@ -101,8 +101,8 @@
 
 .hamburger {
   display: none;
-  background: rgb(255 255 255 / 0.05);
-  border: 1px solid rgb(255 255 255 / 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   width: 40px;
   height: 40px;
 
@@ -119,7 +119,7 @@
 }
 
 .hamburger:hover {
-  background: rgb(0 240 255 / 0.1);
+  background: rgba(0, 240, 255, 0.1);
   border-color: var(--cyan);
 }
 
@@ -163,8 +163,8 @@
 }
 
 .lang-toggle-btn {
-  background: rgb(255 255 255 / 0.05);
-  border: 1px solid rgb(255 255 255 / 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: var(--cyan);
   font-family: var(--font-code);
   font-weight: 800;
@@ -180,7 +180,7 @@
 }
 
 .lang-toggle-btn:hover {
-  background: rgb(0 240 255 / 0.1);
+  background: rgba(0, 240, 255, 0.1);
   border-color: var(--cyan);
 }
 

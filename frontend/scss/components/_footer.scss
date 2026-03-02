@@ -9,8 +9,8 @@
   margin-top: 80px;
 
   @include mobile {
-    border-top: 1px solid rgb(0 240 255 / 0.1);
-    background: rgb(5 5 8 / 0.8);
+    border-top: 1px solid rgba(0, 240, 255, 0.1);
+    background: rgba(5, 5, 8, 0.8);
     padding: 60px 20px 30px;
     margin-top: 100px;
   }
@@ -101,7 +101,7 @@
 }
 
 .footer-stack span {
-  background: rgb(255 255 255 / 0.05);
+  background: rgba(255, 255, 255, 0.05);
   padding: 5px 12px;
   font-size: 0.8rem;
   border: 1px solid #fff0;
@@ -115,7 +115,7 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid rgb(255 255 255 / 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding-top: 30px;
   text-align: center;
 }
