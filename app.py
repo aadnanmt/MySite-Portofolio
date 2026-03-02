@@ -12,7 +12,7 @@ from flask_minify import Minify
 from backend.security.headers import security_headers
 from backend.routes.home import main_bp
 from backend.routes.blog import blog_bp
-from backend.utility.vite_app import init_vite
+from backend.routes.seo import seo_bp
 
 template_directory = os.path.join(current_directory, 'templates')
 static_directory = os.path.join(current_directory, 'static')
@@ -21,10 +21,9 @@ app = Flask(__name__, template_folder=template_directory, static_folder=static_d
 
 Minify(app=app, html=True, js=True, cssless=True)
 
-init_vite(app)
-
 app.register_blueprint(main_bp)
 app.register_blueprint(blog_bp)
+app.register_blueprint(seo_bp)
 
 if __name__ == '__main__':
     app.run()
