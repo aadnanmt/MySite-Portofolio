@@ -18,7 +18,7 @@
   font-weight: 600;
   letter-spacing: 2px;
   margin-bottom: 25px;
-  background: rgba(0, 240, 255, 0.05);
+  background: var(--cyan-5);
 
   text-transform: uppercase;
   transition: all 0.3s ease;
@@ -30,7 +30,7 @@
 }
 
 .status:hover {
-  background: rgba(0, 240, 255, 0.1);
+  background: var(--cyan-10);
 
   transform: translateY(-2px);
   cursor: default;
