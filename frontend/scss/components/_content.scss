@@ -157,7 +157,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgb(255 255 255 / 0.05);
+  background: rgba(255, 255, 255, 0.05);
   padding: 15px;
   min-width: 150px;
   border: 1px solid #fff0;
@@ -193,7 +193,7 @@
 
 .tool-item:hover {
   border-color: var(--cyan);
-  background: rgb(0 240 255 / 0.05);
+  background: rgba(0, 240, 255, 0.05);
 }
 
 .tool-item:hover i {
@@ -236,7 +236,7 @@
 .tags span {
   font-size: 0.7rem;
   padding: 3px 8px;
-  border: 1px solid rgb(255 255 255 / 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 
   margin-right: 5px;
   font-family: var(--font-code);
@@ -369,8 +369,8 @@
 .contact-form-wrapper textarea {
   width: 100%;
   padding: 15px;
-  background: rgb(0 0 0 / 0.4);
-  border: 1px solid rgb(255 255 255 / 0.1);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 
   color: #fff;
   font-family: "Space Grotesk", sans-serif;
@@ -382,7 +382,7 @@
 .contact-form-wrapper input:focus,
 .contact-form-wrapper textarea:focus {
   border-color: var(--cyan);
-  background: rgb(0 240 255 / 0.05);
+  background: rgba(0, 240, 255, 0.05);
 }
 
 .btn-primary.full-width {
@@ -432,8 +432,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgb(0 0 0 / 0.3);
-  border: 1px solid rgb(255 255 255 / 0.1);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 
   text-decoration: none;
   transition: all 0.3s ease;
@@ -441,7 +441,7 @@
 
 .contact-item:hover {
   border-color: var(--cyan);
-  background: rgb(0 240 255 / 0.05);
+  background: rgba(0, 240, 255, 0.05);
   transform: translateX(10px);
 }
 
@@ -451,7 +451,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(255 255 255 / 0.05);
+  background: rgba(255, 255, 255, 0.05);
 
   font-size: 1.5rem;
   color: var(--cyan);
