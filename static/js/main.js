@@ -11,7 +11,7 @@ import { initParticle } from './module/particle.js';
 
 // import scss
 // Pah: frontend/js/main.js => frontend/scss/main.scss
-import '../scss/main.scss'; 
+// import '../scss/main.scss'; 
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("JS okeyyy...");
