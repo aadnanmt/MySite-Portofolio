@@ -1,7 +1,7 @@
 // frontend/js/main.js
 
 // import module
-import { initPreloader } from './module/preloader.js';
+// import { initPreloader } from './module/preloader.js';
 import { initNavigation } from './module/navigation.js';
 import { LanguageManager } from './module/language.js';
 import { initTyping } from './module/typing.js';
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("JS okeyyy...");
 
   // execute module
-  initPreloader();
+  // initPreloader();
   initNavigation();
   LanguageManager.init();
   initTyping();
