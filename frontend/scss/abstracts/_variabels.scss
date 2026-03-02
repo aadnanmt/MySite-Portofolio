@@ -1,5 +1,5 @@
 :root {
-  /* --- MAIN COLORS --- */
+  /* --- main color --- */
   --bg-dark: #050508;
   --cyan: #00f0ff;
   --green: #00ff00;
@@ -8,18 +8,31 @@
   --yellow: #ffbd2e;
   --white: #ffffff;
   
-  /* --- TEXT --- */
+  /* --- text --- */
   --text-main: #ffffff;
   --text-muted: #8b9bb4;
   
-  /* --- UTILITIES --- */
+  /* --- utility --- */
   --glass: rgba(15, 15, 22, 0.6);
   --border: 1px solid rgba(0, 240, 255, 0.2);
   --border-dim: rgba(255, 255, 255, 0.1);
   --shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   
-  /* --- FONTS --- */
+  /* --- font --- */
   --font-head: "Syncopate", sans-serif;
   --font-body: "Space Grotesk", sans-serif;
   --font-code: "JetBrains Mono", monospace;
+
+  /* --- my utility custom --- */
+  --white-2:  rgba(255, 255, 255, 0.02);
+  --white-3:  rgba(255, 255, 255, 0.03);
+  --white-5:  rgba(255, 255, 255, 0.05);
+  --white-20: rgba(255, 255, 255, 0.2);
+  --cyan-2:   rgba(0, 240, 255, 0.02);
+  --cyan-5:   rgba(0, 240, 255, 0.05);
+  --cyan-10:  rgba(0, 240, 255, 0.1);
+  --black-30: rgba(0, 0, 0, 0.3);
+  --black-40: rgba(0, 0, 0, 0.4);
+  --bg-80:    rgba(5, 5, 8, 0.8);
+  --bg-98:    rgba(5, 5, 8, 0.98);
 }
