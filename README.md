@@ -1,105 +1,153 @@
-# Portofio Website
+# Website Portofolio
 
-![Portfolio Preview](image/webport.png) 
+![Portfolio Preview](image/webport.png)
 <p align="center">
-  <img src="https://img.shields.io/badge/Made%20with-Flask-black?style=for-the-badge&logo=flask" alt="Flask">
+  <img src="https://img.shields.io/badge/Dibuat%20dengan-Flask-black?style=for-the-badge&logo=flask" alt="Flask">
   <img src="https://img.shields.io/badge/Frontend-HTML%20%2F%20CSS%20%2F%20JS-blue?style=for-the-badge" alt="Frontend">
+  <img src="https://img.shields.io/badge/SCSS-libsass-pink?style=for-the-badge&logo=sass" alt="SCSS">
   <img src="https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge&logo=vercel" alt="Vercel">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/badge/Lisensi-MIT-green?style=for-the-badge" alt="License">
 </p>
 
-## Overview
+## Gambaran Umum
 
-This repository contains the source code for my personal portfolio website. It is designed to showcase my projects, skills, and experience as a **Web Developer** and **Prompt Designer**.
+Repository ini berisi source code website portofolio pribadiku. Dibuat untuk menampilkan proyek, keahlian, dan pengalaman sebagai **Web Developer** dan **Prompt Designer**.
 
-The site is built with a focus on performance, interactivity, and a modern "Cyberpunk/Cyan" aesthetic. It features a bilingual system (Indonesian/English) managed via JSON.
+Website dibangun dengan fokus pada performa, interaktivitas, dan estetika modern bergaya *Cyberpunk/Cyan*. Dilengkapi sistem bilingual (Indonesia/Inggris) yang dikelola via JSON.
 
 **Live Demo:** [https://www.aadnanmt.web.id](https://www.aadnanmt.web.id)
 
-## Key Features
+## Fitur Utama
 
-* **Lightweight Backend:** Powered by Python **Flask**.
-* **Multi-Language Support:** Dynamic switching between Indonesian and English using `static/lang/language.json`.
-* **Interactive UI:** Custom Particle System implementation on HTML5 Canvas (`main.js`).
-* **Responsive Design:** Fully optimized for Desktop, Tablet, and Mobile.
-* **Security:** Implemented basic security headers via `flask-talisman` (commented out in dev, ready for prod).
-* **Vercel Ready:** Configured for serverless deployment via `vercel.json`.
+- **Backend Ringan:** Python **Flask** sebagai server.
+- **Multi-Bahasa:** Beralih antara Indonesia dan Inggris via `static/lang/language.json`.
+- **UI Interaktif:** Particle System custom di HTML5 Canvas, efek typing, dan preloader.
+- **Desain Responsif:** Optimal di Desktop, Tablet, dan Mobile.
+- **SEO:** Meta tags lengkap, `robots.txt`, dan `sitemap.xml` dinamis.
+- **Security Headers:** Cache control, X-Frame-Options, X-Content-Type-Options.
+- **Vercel Ready:** Konfigurasi serverless via `vercel.json`.
 
 ## Tech Stack
 
-* **Backend:** Python 3.x, Flask
-* **Frontend:** HTML5, CSS3, JavaScript
-* **Assets:** FontAwesome 6, Google Fonts (Space Grotesk, Syncopate, JetBrains Mono)
-* **Deployment:** Vercel Serverless
+- **Backend:** Python 3.x, Flask, Flask-Minify
+- **Frontend:** HTML5, SCSS (dikompilasi via libsass), Vanilla JavaScript (ES Modules)
+- **Assets:** FontAwesome 6, Google Fonts (Space Grotesk, Syncopate, JetBrains Mono)
+- **Deployment:** Vercel Serverless
 
-## Project Structure
+## Struktur Proyek
 
-```/
-├── api/
-│   └── app.py                  # Application entry point
+```
+MySite-Portofolio/
+├── app.py                      # Entry point aplikasi Flask
+├── build.py                    # Script compile SCSS --> CSS
+├── requirements.txt            # Python dependencies
+├── vercel.json                 # Konfigurasi deployment Vercel
+├── backend/
+│   ├── routes/
+│   │   ├── home.py             # Route halaman utama (/)
+│   │   ├── blog.py             # Route blog (/blog/)
+│   │   └── seo.py              # Route robots.txt & sitemap.xml
+│   ├── security/
+│   │   └── headers.py          # Security & cache headers
+│   └── utility/
+│       └── util.py             # Helper: baca & cache posts markdown
+├── frontend/
+│   ├── js/                     # Source JavaScript (ES Modules)
+│   │   ├── main.js
+│   │   └── module/             # language, navigation, particle, dll
+│   └── scss/                   # Source SCSS modular
+│       ├── main.scss
+│       ├── abstracts/          # Variables, mixins, utils
+│       ├── base/               # Reset, typography, global
+│       ├── components/         # Header, hero, content, footer
+│       └── pages/              # Blog index & blog post
 ├── static/
 │   ├── css/
-│   │   └── main.css            # Stylesheet
-│   ├── img/
-│   │   └── me.jpg              # Profile image
-│   ├── js/
-│   │   └── main.js             # Frontend logic
+│   │   ├── main.css            # CSS hasil compile dari SCSS
+│   │   ├── all.css             # FontAwesome
+│   │   └── syntax.css          # Syntax highlighting (Pygments)
+│   ├── js/                     # JavaScript siap di-serve
+│   │   ├── main.js
+│   │   └── module/
+│   ├── fonts/                  # Web fonts
+│   ├── img/                    # Gambar profil
 │   ├── lang/
-│   │   └── language.json       # JSON file for English/Indonesian translations
-│   ├── svg/
-│   │   └── iconan.svg          # SVG Icon
-│   └── note.txt                # Secret text file with credits and notes
+│   │   └── language.json       # Data terjemahan ID/EN
+│   └── svg/
+│       └── iconan.svg          # Icon website
 ├── templates/
-│   └── main.html               # HTML template for the single-page site
-├── LICENSE                     # MIT License file
-├── README.md                   # Project documentation
-├── requirements.txt            # Python dependencies (Flask, talisman, etc)
-└── vercel.json                 # Vercel deployment configuration
+│   ├── layouts/
+│   │   └── base.html           # Layout utama Jinja2
+│   ├── components/             # Navbar, hero, about, skills, dll
+│   └── pages/                  # home, blog, error 404
+└── posts/                      # Artikel blog format Markdown
 ```
 
-## Installation & Local Development
+## Instalasi & Development Lokal
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/aadnanmt/MySite-Portofolio.git
-    cd MySite-Portofolio
-    ```
+**1. Clone repository**
+```bash
+git clone https://github.com/aadnanmt/MySite-Portofolio.git
+cd MySite-Portofolio
+```
 
-2.  **Create a Virtual Environment on Windows**
-    ```bash
-    python -m venv venv
-    venv\Scripts\activate
-    ```
-3.  **Create a Virtual Environment on macOS/Linux**
-    ```bash
-    python -m venv venv
-    source venv/bin/activate
-    ```
+**2. Buat virtual environment**
+```bash
+# macOS / Linux
+python -m venv venv
+source venv/bin/activate
 
-4.  **Install Dependencies**
-    ```bash
-    pip install -r requirements.txt
-    ```
+# Windows
+python -m venv venv
+venv\Scripts\activate
+```
 
-5.  **Run the Application**
-    ```bash
-    cd api
-    flask run
-    ```
+**3. Install dependencies**
+```bash
+pip install -r requirements.txt
+```
 
-6.  **Access the site**
-    Open your browser and go to [http://127.0.0.1:5000](http://127.0.0.1:5000)
+**4. Jalankan aplikasi**
+```bash
+flask run
+```
 
-## License
-
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-* **Name:** Adnan Slamet Wibowo
-* **Role:** Web Developer & Prompt Designer
-* **Email:** aadnanmtcontact@gmail.com
-* **LinkedIn:** [Adnan Slamet Wibowo](https://linkedin.com/in/adnan-slamet-wibowo-73906035b)
+**5. Akses di browser**
+Buka [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 ---
-<p align="center">Made with ❤️ and ☕ in Indonesia</p>
+
+### Update CSS (setelah ubah SCSS)
+
+```bash
+python build.py
+```
+
+### Tambah artikel blog baru
+
+Buat file `.md` baru di folder `posts/` dengan format frontmatter berikut:
+
+```markdown
+---
+title: "Judul Artikel"
+date: "YYYY-MM-DD"
+description: "Deskripsi singkat artikel."
+tags: ["tag1", "tag2"]
+---
+
+Isi artikel di sini...
+```
+
+## Lisensi
+
+Proyek ini dilisensikan di bawah **MIT License**. Lihat file [LICENSE](LICENSE) untuk detail.
+
+## Kontak
+
+- **Nama:** Adnan Slamet Wibowo
+- **Role:** Web Developer & Prompt Eng.
+- **Email:** contact@aadnanmt.web.id
+- **Instagram:** [@aadnanmt](https://www.instagram.com/aadnanmt)
+
+---
+<p align="center">Dibuat oleh Adnan dari Indonesia</p>
