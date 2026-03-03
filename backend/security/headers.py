@@ -4,8 +4,14 @@ def security_headers(app):
     
     @app.after_request
     def add_header(response):
-        if request.path.startswith('/static'):
-            response.headers['Cache-Control'] = 'public, max-age=31536000'
+        path = request.path
+
+        if path.startswith('/static/css') or path.startswith('/static/js'):
+            # css,js cache 
+            response.headers['Cache-Control'] = 'public, max-age=88888, must-revalidate'
+        elif path.startswith('/static'):
+            # font, image, svg, webfonts| immutable
+            response.headers['Cache-Control'] = 'public, max-age=31536000, immutable'
         else:
             response.headers['Cache-Control'] = 'public, max-age=0'
             response.headers['X-Content-Type-Options'] = 'nosniff'
