@@ -2,28 +2,34 @@
 
 {% block title %}{{ post.title }} | Adnan Blog{% endblock %}
 
-{% block description %}{{ post.desc }}{% endblock %}
+{% block description %}{{ post.description or post.desc }}{% endblock %}
 
 {% block og_title %}{{ post.title }}{% endblock %}
-{% block og_description %}{{ post.desc }}{% endblock %}
+{% block og_description %}{{ post.description or post.desc }}{% endblock %}
 
 {% block content %}
 <section class="blog-container">
 
     <nav class="cmd-nav">
         <a href="{{ url_for('blog.index') }}" class="cmd-link">
-            <span class="cmd-prompt"> cd ..</span> { back to blog }
+            <span class="cmd-prompt"><i class="fa-solid fa-arrow-left"></i></span>back to blog
         </a>
     </nav>
 
     <header class="post-hero">
+        {% if post.cover %}
+        <div class="post-cover">
+            <img src="{{ post.cover }}" alt="{{ post.title }}" loading="lazy"/>
+        </div>
+        {% endif %}
+
+        <h1 class="post-hero-title">{{ post.title }}</h1>
+
         <div class="entry-tags" style="margin-bottom: 15px;">
             {% for tag in post.tags %}
             <span class="tag-chip" style="color: var(--cyan); border-color: var(--cyan);">{{ tag }}</span>
             {% endfor %}
         </div>
-
-        <h1 class="post-hero-title">{{ post.title }}</h1>
 
         <div class="entry-meta">
             <span><i class="far fa-calendar"></i> {{ post.date }}</span>

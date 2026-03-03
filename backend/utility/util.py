@@ -22,7 +22,8 @@ def get_posts_cached(root_path):
                     posts.append({
                         'title': post.get('title', 'No Title'),
                         'date': post.get('date', '0000-00-00'),
-                        'desc': post.get('description', ''),
+                        'desc': post.get('description') or post.get('desc', ''),
+                        'cover': post.get('cover', ''),
                         'tags': post.get('tags', []),
                         'slug': filename[:-3]
                     })

@@ -2,6 +2,7 @@
 title: "Hello World: Migrasi ke Flat-File CMS"
 date: "2026-01-23"
 description: "Akhirnya blog ini rilis juga! Dibangun tanpa database, cuma modal Python, Flask dan Markdown. Ini cerita di balik layarnya."
+cover: "/static/img/blog/hello-world.webp"
 tags: ["flask", "python", "simpel", "markdown"]
 ---
 
