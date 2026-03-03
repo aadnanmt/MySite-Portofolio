@@ -50,37 +50,37 @@
   display: block;
   text-decoration: none;
   background: var(--glass);
-  border: 1px solid var(--white-5);
+  border: 1px solid var(--cyan);
   padding: 30px;
-  transition: transform 0.3s ease;
+  // transition: transform 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
-/* fffect hover car */
-.log-entry-card:hover {
-  transform: translateX(8px);
-  border-color: var(--cyan);
-  background: var(--cyan-2);
-  transition: transform 0.3s ease;
-}
+// /* fffect hover car */
+// .log-entry-card:hover {
+//   transform: translateX(8px);
+//   border-color: var(--cyan);
+//   background: var(--cyan-2);
+//   transition: transform 0.3s ease;
+// }
 
-.log-entry-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--cyan);
-  transform: scaleY(0);
-  transition: transform 0.3s ease;
-}
+// .log-entry-card::before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   width: 2px;
+//   background: var(--cyan);
+//   transform: scaleY(0);
+//   transition: transform 0.3s ease;
+// }
 
-.log-entry-card:hover::before {
-  transform: scaleY(1);
-  transition: transform 0.3s ease;
-}
+// .log-entry-card:hover::before {
+//   transform: scaleY(1);
+//   transition: transform 0.3s ease;
+// }
 
 /* typography on card */
 .entry-meta {
