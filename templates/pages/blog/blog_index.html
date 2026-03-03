@@ -5,7 +5,7 @@
 
     <nav class="cmd-nav">
         <a href="{{ url_for('main.home') }}" class="cmd-link">
-            <span class="cmd-prompt">cd ..</span>{Back to Home}
+            <span class="cmd-prompt"><i class="fa-solid fa-arrow-left"></i></span>back to home
         </a>
     </nav>
 
@@ -18,6 +18,12 @@
         {% for post in posts %}
         <article>
             <a href="{{ url_for('blog.post', slug=post.slug) }}" class="log-entry-card">
+
+                {% if post.cover %}
+                <div class="entry-cover">
+                    <img src="{{ post.cover }}" alt="{{ post.title }}" loading="lazy"/>
+                </div>
+                {% endif %}
 
                 <div class="entry-meta">
                     <span>[{{ post.date }}]</span>

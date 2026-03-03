@@ -6,13 +6,13 @@ import frontmatter
 
 blog_bp = Blueprint('blog', __name__, url_prefix='/blog')
 
-# Route: /blog/
+# route: /blog/
 @blog_bp.route('/')
 def index():
     posts = get_posts_cached(current_app.root_path) 
     return render_template('pages/blog/blog_index.html', posts=posts)
 
-# Route: /blog/<slug> for (Post)
+# route: /blog/<slug> for (post)
 @blog_bp.route('/<slug>')
 def post(slug):
     post_folder = os.path.join(current_app.root_path, 'posts') 
@@ -27,5 +27,8 @@ def post(slug):
             post_data.content, 
             extensions=['fenced_code', 'codehilite', 'tables', 'attr_list']
         )
+        # normalize desc
+        if not post_data.get('description') and post_data.get('desc'):
+            post_data['description'] = post_data['desc']
         
     return render_template('pages/blog/blog_post.html', post=post_data, content=content)
