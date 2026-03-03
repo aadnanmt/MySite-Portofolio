@@ -21,6 +21,18 @@ app = Flask(__name__, template_folder=template_directory, static_folder=static_d
 
 Minify(app=app, html=True, js=True, cssless=True)
 
+security_headers(app)
+
+# auto cahche busting static/
+def static_ver(filename):
+    filepath = os.path.join(static_directory, filename)
+    try:
+        return int(os.path.getmtime(filepath))
+    except OSError:
+        return 0
+
+app.jinja_env.globals['static_ver'] = static_ver
+
 app.register_blueprint(main_bp)
 app.register_blueprint(blog_bp)
 app.register_blueprint(seo_bp)
