@@ -25,6 +25,12 @@ security_headers(app)
 
 # auto cahche busting static/
 def static_ver(filename):
+
+    # fix: fallback to file mtime
+    commit_sha = os.environ.get('VERCEL_GIT_COMMIT_SHA') or os.environ.get('VERCEL_DEPLOYMENT_ID')
+    if commit_sha:
+        return commit_sha[:7]
+    
     filepath = os.path.join(static_directory, filename)
     try:
         return int(os.path.getmtime(filepath))
