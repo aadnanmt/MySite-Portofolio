@@ -66,15 +66,15 @@
 }
 
 .red {
-  background: #ff5f56;
+  background: var(--red);
 }
 
 .yellow {
-  background: #ffbd2e;
+  background: var(--yellow);
 }
 
 .green {
-  background: #27c93f;
+  background: var(--green);
 }
 
 .window-name {
@@ -170,7 +170,7 @@
 /* Btn copy code */
 .codehilite {
   position: relative;
-  background: #0d0d0f !important;
+  background: var(--bg-98) !important;
 }
 
 .copy-btn {
@@ -193,16 +193,29 @@
   opacity: 1;
 }
 
-.copy-btn:hover {
-  background: var(--cyan-10);
-  color: var(--cyan);
-  border-color: var(--cyan);
+@media (hover: hover) and (pointer: fine) {
+  .codehilite:hover .copy-btn {
+    opacity: 1;
+  }
+
+  .copy-btn:hover {
+    background: var(--cyan-10);
+    color: var(--cyan);
+    border-color: var(--cyan);
+  }
+}
+
+/* invisibletouch device */
+@media (hover: none) {
+  .copy-btn {
+    opacity: 1;
+  }
 }
 
 .copy-btn.copied {
-  background: rgba(39, 201, 63, 0.1) !important;
-  color: #27c93f !important;
-  border-color: #27c93f !important;
+  background: var(--bg-80) !important;
+  color: var(--green) !important;
+  border-color: var(--green) !important;
 }
 
 /* blink animate */
