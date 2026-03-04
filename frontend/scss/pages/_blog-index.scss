@@ -118,15 +118,5 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    will-change: transform;
-    backface-visibility: hidden;
-    transition: transform 0.4s ease;
-  }
-}
-
-/* only run hoverreal pointer device (mouse) desktp*/
-@media (hover: hover) and (pointer: fine) {
-  .log-entry-card:hover .entry-cover img {
-    transform: scale(1.05);
   }
 }
