@@ -4,6 +4,7 @@ date: "2026-01-26"
 description: "Panduan fundamental dalam menguasai Version Control. Amankan kode, lacak perubahan, dan kolaborasi tanpa takut konflik."
 cover: "/static/img/blog/tutorial-git.webp"
 tags: ["version-control", "git", "engineering"]
+lang: "id"
 ---
 
 
@@ -41,13 +42,13 @@ git add index.html
 **3. Titik Simpan (Commit)**
 Ini kayak Save Game.<br> Kasih pesan yang jelas biar kamu nanti gak bingung saat baca histori-nya.
 ```bash
-git commit -m "menambahkan fitur login (semoga ga ada bug)"
+git commit -m "nambah fitur login"
 ```
 **4. Menghubungkan ke Internet**
 Cuma dilakukan sekali seumur hidup proyekmu.<br> Ini ngasih tau Git lokalmu dikirim ke server mana (GitHub).
 ```bash
 git branch -M main # ganti ke main
-git remote add origin https://github.com/username/name-repo.git
+git remote add origin https://github.com/username/name-repo
 ```
 **5. Upload projekmu (Push)**
 Kirim hasil kodinganmu ke repositori GitHubmu.
