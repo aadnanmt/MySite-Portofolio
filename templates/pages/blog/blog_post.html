@@ -1,5 +1,7 @@
 {% extends "layouts/base.html" %}
 
+{% block html_lang %}{{ post.lang | default('id') }}{% endblock %}
+
 {% block title %}{{ post.title }} | Adnan Blog{% endblock %}
 
 {% block description %}{{ post.description or post.desc }}{% endblock %}
@@ -19,7 +21,7 @@
     <header class="post-hero">
         {% if post.cover %}
         <div class="post-cover">
-            <img src="{{ post.cover }}" alt="{{ post.title }}" loading="lazy"/>
+            <img src="{{ post.cover }}" alt="{{ post.title }}" loading="lazy" />
         </div>
         {% endif %}
 

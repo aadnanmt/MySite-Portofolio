@@ -21,6 +21,4 @@ def not_found_error(error):
 def home():
     projects = load_data('projects.json')
     skills   = load_data('skills.json')
-    socials  = load_data('socials.json')
-    meta     = load_data('meta.json')
-    return render_template('pages/home.html', projects=projects, skills=skills, socials=socials, meta=meta)
+    return render_template('pages/home.html', projects=projects, skills=skills)

@@ -11,7 +11,7 @@
         "explore-project": " TELUSURI PROYEK",
         "contact-me": " HUBUNGI AKU",
         "my-Profile": " PROFILKU",
-        "aboutTXT": "tentang_AKU.txt",
+        "aboutTXT": "tentang_aku.txt",
         "aboutTXT-Adnan": "Halloww, namaku <span>Adnan</span>. Aku penggemar ilmu pengetahuan, terutama di bidang <span>sains dan teknologi</span>.<br><br>Fokusku sekarang adalah <span>menjadi seorang Fullstack Developer</span> dan <span>Prompt Designer</span>. Aku suka membedah, mengonfigurasi, memodifikasi, memperbaiki, dan merusak <span>sumber kode, website, sistem hingga perangkat keras</span>. Aku memulai karir di dunia programming sejak <span>3 Agustus 2023</span> dan mulai aktif di saat <span>pertengahan tahun 2024</span>.<br><br>Aku juga selalu berusaha tetap relevan dan tampil berbeda di saat banyak <span>vibe coders tanpa substansi.</span><br><br>Mau kolaborasi proyek, diskusi ide, atau sekadar ngobrol santai. Bisa <span>hubungi aku kapan saja!</span>",
         "my-Skill": "KEAHLIAN & ALAT",
         "tech-Stack": " TUMPUKAN TEKNOLOGI",
@@ -45,6 +45,7 @@
         "underUnder": " | Dibawah",
         "credit-license": " Lisensi MIT"
     },
+
     "en": {
         "home": "/HOME",
         "profile": "/PROFILE",
@@ -58,7 +59,7 @@
         "contact-me": " CONTACT ME",
         "my-Profile": " MY PROFILE",
         "my-contact": " CONTACT",
-        "aboutTXT": "about_ME.txt",
+        "aboutTXT": "about_me.txt",
         "aboutTXT-Adnan": "Hello, my name is <span>Adnan</span>. I am a fan of science, especially in the fields of <span>science and technology</span>.<br><br>My current focus is on becoming a <span>Fullstack Developer</span> and <span>Prompt Designer</span>. I enjoy dissecting, configuring, modifying, repairing, and breaking <span>source code, websites, systems, and even hardware</span>. I started my career in programming on <span>August 3, 2023</span>, and became active in <span>mid-2024</span>.<br><br>I also strive to stay relevant and stand out in a sea of <span>coders without substance</span>.<br><br>Whether you want to collaborate on a project, discuss ideas, or just chat casually, feel free to <span>contact me anytime!</span>",
         "my-Skill": "SKILLS & TOOLS",
         "programming-text": "Fullstack Development focusing on backend efficiency and modern interactivity.",

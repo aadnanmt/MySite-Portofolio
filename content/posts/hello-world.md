@@ -4,6 +4,7 @@ date: "2026-01-23"
 description: "Akhirnya blog ini rilis juga! Dibangun tanpa database, cuma modal Python, Flask dan Markdown. Ini cerita di balik layarnya."
 cover: "/static/img/blog/hello-world.webp"
 tags: ["flask", "python", "simpel", "markdown"]
+lang: "id"
 ---
 
 ## Kenapa Gak Pake Database aja?
@@ -13,7 +14,7 @@ Jujur, aku kadang ngerasa capek sama database SQL yang ribet. Dan aku baru ingat
 ### Kelebihannya Apa?
 
 1.  **Ngebut**: Gak perlu konek ke MySQL/Postgres.
-2.  **Portable**: Tinggal bikin file markdown (.md ) dan copy ke folder `api/posts`. Dan untuk  lokasi direktori posts kedepannya akan aku letakkan di root.
+2.  **Portable**: Tinggal bikin file markdown (.md ) dan copy ke folder `content/posts/`. Dan untuk  lokasi direktori posts kedepannya akan aku letakkan di root.
 3.  **Developer Friendly**: Nulis blog rasanya kayak ngoding di VS Code.
 
 ### Contoh Syntax Highlighting
@@ -26,7 +27,7 @@ Dan juga udah support warna-warni kodingan (Syntax Highlighting) otomatis. Cek s
 ```
 **Javascript**
 ```Javascript
-console.log(HELLO BRUHH)
+console.warn(HELLO BRUHH)
 ```
 
 Sudah begitu saja, terimakasih telah membaca artikelku. Nantikan artikel lainnya!!
