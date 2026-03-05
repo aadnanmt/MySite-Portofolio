@@ -1,0 +1,48 @@
+{
+  "categories": [
+    {
+      "title": "PROGRAMMING",
+      "icon": "fas fa-code",
+      "lang_key": "programming-text",
+      "focus": true
+    },
+    {
+      "title": "SISTEM & JARINGAN",
+      "icon": "fab fa-linux",
+      "lang_key": "network-text",
+      "focus": true
+    },
+    {
+      "title": "AI & PROMPT",
+      "icon": "fas fa-brain",
+      "lang_key": "ai-text",
+      "focus": false
+    },
+    {
+      "title": "SECURITY SYSTEM",
+      "icon": "fa-solid fa-shield",
+      "lang_key": "security-text",
+      "focus": false
+    }
+  ],
+  "tools": [
+    { "icon": "fab fa-html5",       "name": "HTML" },
+    { "icon": "fab fa-css3-alt",    "name": "CSS" },
+    { "icon": "fab fa-js",          "name": "JS" },
+    { "icon": "fab fa-python",      "name": "Python" },
+    { "icon": "fas fa-terminal",    "name": "Bash" },
+    { "icon": "fab fa-node",        "name": "Node JS" },
+    { "icon": "fab fa-react",       "name": "React" },
+    { "icon": "fab fa-golang",      "name": "Golang" },
+    { "icon": "fab fa-linux",       "name": "Linux" },
+    { "icon": "fab fa-windows",     "name": "Windows" },
+    { "icon": "fab fa-docker",      "name": "Docker" },
+    { "icon": "fab fa-git-alt",     "name": "Git" },
+    { "icon": "fa-brands fa-github","name": "Github" },
+    { "icon": "fa-brands fa-firefox","name": "Firefox" },
+    { "icon": "fab fa-chrome",      "name": "Chromium" },
+    { "icon": "fa-solid fa-code",   "name": "Sublime" },
+    { "icon": "fab fa-markdown",    "name": "Markdown" },
+    { "icon": "fa-brands fa-cloudflare", "name": "Cloudflare" }
+  ]
+}

@@ -6,3 +6,6 @@ node_modules/
 .env
 package-lock.json
 *.pyc
+
+ai-replace-programmer-and-dev.md
+droidcam.md
