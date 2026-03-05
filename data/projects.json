@@ -1,0 +1,58 @@
+[
+  {
+    "title": "My Father Portfolio",
+    "icon": "fa-solid fa-code",
+    "lang_key": "project2-text",
+    "tags": ["HTML", "CSS", "JS"],
+    "code": "https://github.com/aadnanmt/myFather-Portfolio",
+    "demo": "https://susantoelectric.netlify.app"
+  },
+  {
+    "title": "Maybyte Monitor",
+    "icon": "fa-solid fa-laptop-code",
+    "lang_key": "project3-text",
+    "tags": ["Flask", "Psu-Util", "Flask-Cors"],
+    "code": "https://github.com/aadnanmt/Maybyte-pro",
+    "demo": "https://monitor.aadnanmt.web.id"
+  },
+  {
+    "title": "Sicin",
+    "icon": "fa-solid fa-heart",
+    "lang_key": "project4-text",
+    "tags": ["HTML", "CSS", "JS"],
+    "code": "https://github.com/aadnanmt/Sicin",
+    "demo": "https://aadnanmt.github.io/Sicin"
+  },
+  {
+    "title": "FiberOptic Class",
+    "icon": "fa-solid fa-network-wired",
+    "lang_key": "project5-text",
+    "tags": ["Flask", "Supabase", "TailwindCSS"],
+    "code": "https://github.com/aadnanmt/FiberOptic",
+    "demo": "https://www.example-secret.vercel.app"
+  },
+  {
+    "title": "Restorean Site",
+    "icon": "fa-solid fa-store",
+    "lang_key": "project6-text",
+    "tags": ["HTML", "CSS", "JS", "Github Page"],
+    "code": "https://github.com/aadnanmt/Web-Restorean",
+    "demo": "https://aadnanmt.github.io/Web-Restorean/"
+  },
+  {
+    "title": "Lixanime",
+    "icon": "fa-solid fa-film",
+    "lang_key": "project7-text",
+    "tags": ["TailwindCSS", "React", "Vite"],
+    "code": "https://github.com/aadnanmt/Lixanime",
+    "demo": "https://lixanime.edgeone.dev"
+  },
+  {
+    "title": "Groqili",
+    "icon": "fas fa-robot",
+    "lang_key": "project9-text",
+    "tags": ["Python", "Console Groq"],
+    "code": "https://github.com/aadnanmt/Groqili",
+    "demo": null
+  }
+]

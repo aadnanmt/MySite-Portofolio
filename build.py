@@ -6,7 +6,7 @@ import os
 import sass
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-SCSS_ENTRY = os.path.join(BASE_DIR, 'frontend', 'scss', 'main.scss')
+SCSS_ENTRY = os.path.join(BASE_DIR, 'src', 'scss', 'main.scss')
 CSS_OUTPUT = os.path.join(BASE_DIR, 'static', 'css', 'main.css')
 
 def build_css():

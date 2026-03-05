@@ -15,7 +15,7 @@ def index():
 # route: /blog/<slug> for (post)
 @blog_bp.route('/<slug>')
 def post(slug):
-    post_folder = os.path.join(current_app.root_path, 'posts') 
+    post_folder = os.path.join(current_app.root_path, 'content', 'posts') 
     filepath = os.path.join(post_folder, f'{slug}.md')
     
     if not os.path.exists(filepath):
