@@ -8,6 +8,7 @@ sys.path.append(current_directory)
 
 from flask import Flask, request
 from flask_minify import Minify
+from backend.extens import cache
 
 from backend.security.headers import security_headers
 from backend.routes.home import main_bp
@@ -19,7 +20,10 @@ static_directory = os.path.join(current_directory, 'static')
 
 app = Flask(__name__, template_folder=template_directory, static_folder=static_directory)
 
-Minify(app=app, html=True, js=True, cssless=True)
+# Flask-Caching configuration
+cache.init_app(app, config={'CACHE_TYPE': 'SimpleCache', 'CACHE_DEFAULT_TIMEOUT': 300})
+
+Minify(app=app, html=True, js=True, cssless=False)
 
 security_headers(app)
 

@@ -1,34 +1,39 @@
 from flask import Blueprint, render_template, current_app
 from backend.utility.util import get_posts_cached
+from backend.extens import cache
 import markdown
 import os
 import frontmatter
 
-blog_bp = Blueprint('blog', __name__, url_prefix='/blog')
+blog_bp = Blueprint("blog", __name__, url_prefix="/blog")
+
 
 # route: /blog/
-@blog_bp.route('/')
+@blog_bp.route("/")
+@cache.cached(timeout=300)  # 5 minute
 def index():
-    posts = get_posts_cached(current_app.root_path) 
-    return render_template('pages/blog/blog_index.html', posts=posts)
+    posts = get_posts_cached(current_app.root_path)
+    return render_template("pages/blog/blog_index.html", posts=posts)
+
 
 # route: /blog/<slug> for (post)
-@blog_bp.route('/<slug>')
+@blog_bp.route("/<slug>")
+@cache.cached(timeout=3600)  # 1 hour
 def post(slug):
-    post_folder = os.path.join(current_app.root_path, 'content', 'posts') 
-    filepath = os.path.join(post_folder, f'{slug}.md')
-    
+    post_folder = os.path.join(current_app.root_path, "content", "posts")
+    filepath = os.path.join(post_folder, f"{slug}.md")
+
     if not os.path.exists(filepath):
-        return render_template('pages/errors/404.html'), 404
-        
-    with open(filepath, 'r', encoding='utf-8') as f:
+        return render_template("pages/errors/404.html"), 404
+
+    with open(filepath, "r", encoding="utf-8") as f:
         post_data = frontmatter.load(f)
         content = markdown.markdown(
-            post_data.content, 
-            extensions=['fenced_code', 'codehilite', 'tables', 'attr_list']
+            post_data.content,
+            extensions=["fenced_code", "codehilite", "tables", "attr_list"],
         )
         # normalize desc
-        if not post_data.get('description') and post_data.get('desc'):
-            post_data['description'] = post_data['desc']
-        
-    return render_template('pages/blog/blog_post.html', post=post_data, content=content)
+        if not post_data.get("description") and post_data.get("desc"):
+            post_data["description"] = post_data["desc"]
+
+    return render_template("pages/blog/blog_post.html", post=post_data, content=content)
