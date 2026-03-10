@@ -1,43 +1,41 @@
-<section class="content-section" id="projects">
-    <div class="section-title-wrapper">
-        <h2 class="section-title" data-lang="my-Project">
-            <i class="fa-solid fa-terminal fa-fade"></i>
-        </h2>
-        <div class="line"></div>
-    </div>
-    <div class="project-grid">
-        {% for project in projects %}
-        <div class="project-card glass-card">
-            <div class="card-head">
-                <i class="{{ project.icon }}"></i>
-                <span>{{ project.title }}</span>
-            </div>
-            <div class="card-body">
-                <p data-lang="{{ project.lang_key }}"></p>
-                <div class="tags">
-                    {% for tag in project.tags %}
-                    <span>{{ tag }}</span>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="card-foot">
-                <a href="{{ project.code }}"
-                   aria-label="Visit {{ project.title }} source code on GitHub"
-                   data-lang="code-text"
-                   rel="noopener noreferrer" target="_blank">
-                    <i class="fas fa-code"></i>
-                </a>
-                {% if project.demo %}
-                <a href="{{ project.demo }}"
-                   aria-label="Visit {{ project.title }} demo"
-                   rel="noopener noreferrer" target="_blank">
-                    DEMO
-                    <i class="fas fa-external-link-alt"></i>
-                </a>
-                {% endif %}
+<div class="project-grid">
+    {% for project in projects %}
+    <div class="project-card glass-card">
+        <div class="card-head">
+            <i class="{{ project.icon }}"></i>
+            <span>{{ project.title }}</span>
+        </div>
+        <div class="card-body">
+            <p data-lang="{{ project.lang_key }}"></p>
+            <div class="tags">
+                {% for tag in project.tags %}
+                <span>{{ tag }}</span>
+                {% endfor %}
             </div>
         </div>
-        {% endfor %}
+        <div class="card-foot">
+            <a href="{{ project.code }}"
+               aria-label="Visit {{ project.title }} source code on GitHub"
+               data-lang="code-text"
+               rel="noopener noreferrer" target="_blank">
+                <i class="fas fa-code"></i>
+            </a>
+            {% if project.demo %}
+            <a href="{{ project.demo }}"
+               aria-label="Visit {{ project.title }} demo"
+               rel="noopener noreferrer" target="_blank">
+                DEMO
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+            {% endif %}
+        </div>
     </div>
-</section>
-<!-- project section end -->
+    {% endfor %}
+</div>
+{% if show_projects_more %}
+<div class="see-more-wrapper">
+    <a href="{{ url_for('main.projects') }}" class="btn-secondary">
+        SEE ALL PROJECTS <i class="fas fa-arrow-right"></i>
+    </a>
+</div>
+{% endif %}

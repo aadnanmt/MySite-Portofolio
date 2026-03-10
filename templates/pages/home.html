@@ -1,12 +1,53 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-    
-    {% include 'components/loader.html' %}
-    {% include "components/hero.html" %}
-    {% include "components/about.html" %}
+
+{% include 'components/loader.html' %}
+{% include "components/hero.html" %}
+<!-- About Teaser -->
+{% include "components/about.html" %}
+<div class="see-more-wrapper">
+    <a href="{{ url_for('main.about') }}" class="btn-secondary">
+        MORE ABOUT ME <i class="fas fa-arrow-right"></i>
+    </a>
+</div>
+
+<!-- Skills Teaser -->
+<section class="content-section" id="skills-teaser">
+    <div class="section-title-wrapper">
+        <h2 class="section-title" data-lang="my-Skill">
+            <i class="fa-solid fa-terminal fa-fade"></i>
+        </h2>
+        <div class="line"></div>
+    </div>
     {% include "components/skills.html" %}
+</section>
+
+<!-- Projects Teaser -->
+<section class="content-section" id="projects-teaser">
+    <div class="section-title-wrapper">
+        <h2 class="section-title" data-lang="my-Project">
+            <i class="fa-solid fa-terminal fa-fade"></i>
+        </h2>
+        <div class="line"></div>
+    </div>
+    {% set show_projects_more = True %}
     {% include "components/projects.html" %}
-    {% include "components/contact.html" %}
+</section>
+
+<!-- Blog Teaser -->
+<section class="content-section" id="blog-teaser">
+    <div class="section-title-wrapper">
+        <h2 class="section-title">
+            <i class="fas fa-pen-nib fa-fade"></i> <span data-lang="blog">BLOG</span>
+        </h2>
+        <div class="line"></div>
+    </div>
+
+    {% set show_blog_more = True %}
+    {% include "components/blog_list.html" %}
+</section>
+
+{% include "components/contact.html" %}
 
 {% endblock %}
