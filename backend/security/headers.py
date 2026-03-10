@@ -7,8 +7,8 @@ def security_headers(app):
         path = request.path
 
         if path.startswith('/static/css') or path.startswith('/static/js'):
-            # css,js cache 
-            response.headers['Cache-Control'] = 'public, max-age=88888, must-revalidate'
+            # css,js cache - immutable 
+            response.headers['Cache-Control'] = 'public, max-age=31536000, immutable'
         elif path.startswith('/static'):
             # font, image, svg, webfonts| immutable
             response.headers['Cache-Control'] = 'public, max-age=31536000, immutable'

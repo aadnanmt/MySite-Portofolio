@@ -23,7 +23,7 @@ app = Flask(__name__, template_folder=template_directory, static_folder=static_d
 # Flask-Caching configuration
 cache.init_app(app, config={'CACHE_TYPE': 'SimpleCache', 'CACHE_DEFAULT_TIMEOUT': 300})
 
-Minify(app=app, html=True, js=True, cssless=False)
+Minify(app=app, html=True, js=False, cssless=False)
 
 security_headers(app)
 
