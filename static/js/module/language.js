@@ -9,7 +9,7 @@ export const LanguageManager = {
   // async init function
   async init() {
     try {
-      const response = await fetch("/static/lang/language.json?v=" + new Date().getTime()); // path to language.json file
+      const response = await fetch("/static/lang/language.json"); // path to language.json file
       this.data = await response.json();
       this.applyLanguage(this.currentLang);
 
