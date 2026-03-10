@@ -1,37 +1,16 @@
 <!-- skills and tools section start -->
-<section class="content-section" id="skills">
-    <div class="section-title-wrapper">
-        <h2 class="section-title" data-lang="my-Skill">
-            <i class="fa-solid fa-terminal fa-fade"></i>
-        </h2>
-        <div class="line"></div>
-    </div>
-    <div class="skill-cards-grid">
-        {% for cat in skills.categories %}
-        <div class="glass-card skill-box">
-            {% if cat.focus %}
-            <div class="ribbon">FOCUS</div>
-            {% endif %}
-            <div class="skill-icon-glow">
-                <i class="{{ cat.icon }}"></i>
-            </div>
-            <h3>{{ cat.title }}</h3>
-            <p data-lang="{{ cat.lang_key }}"></p>
+<div class="skill-cards-grid">
+    {% for cat in skills.categories %}
+    <div class="glass-card skill-box">
+        {% if cat.focus %}
+        <div class="ribbon">FOCUS</div>
+        {% endif %}
+        <div class="skill-icon-glow">
+            <i class="{{ cat.icon }}"></i>
         </div>
-        {% endfor %}
+        <h3>{{ cat.title }}</h3>
+        <p data-lang="{{ cat.lang_key }}"></p>
     </div>
-    <div class="tech-stack-wrapper mt-large">
-        <h3 class="stack-title" data-lang="tech-Stack"></h3>
-        <div class="glass-card">
-            <div class="tools-grid">
-                {% for tool in skills.tools %}
-                <div class="tool-item">
-                    <i class="{{ tool.icon }}"></i>
-                    <span>{{ tool.name }}</span>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</section>
+    {% endfor %}
+</div>
 <!-- skills and tools section end -->

@@ -1,0 +1,23 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Projects | Adnan Slamet Wibowo{% endblock %}
+
+{% block content %}
+<section class="content-section" id="projects-page">
+    <div class="page-container">
+        <div class="section-title-wrapper section-spacing">
+            <h2 class="section-title">
+                <i class="fa-solid fa-terminal fa-fade"></i> ALL PROJECTS
+            </h2>
+            <div class="line"></div>
+        </div>
+
+        {% include "components/projects.html" %}
+
+        <div class="see-more-wrapper">
+            <a href="{{ url_for('main.home') }}" class="btn-secondary">
+                BACK TO HOME <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+</section>
+{% endblock %}

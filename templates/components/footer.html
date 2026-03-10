@@ -32,53 +32,52 @@
                 <h3 data-lang="Instan-link">
                 </h3>
                 <ul class="footer-links">
-          <li>
-            <a href="{{ url_for('main.home') }}" {% if request.endpoint=='main.home' %}
-              onclick="document.getElementById('hero').scrollIntoView({ behavior: 'smooth' }); return false;" {% endif
-              %}>
-              <span data-lang="home"></span>
-            </a>
-          </li>
+                    <li>
+                        <a href="{{ url_for('main.home') }}" {% if request.endpoint=='main.home' %}
+                            onclick="document.getElementById('hero').scrollIntoView({ behavior: 'smooth' }); return false;"
+                            {% endif %}>
+                            <span data-lang="home"></span>
+                        </a>
+                    </li>
 
-          <li>
-            <a href="{{ url_for('main.home', _anchor='about') }}" {% if request.endpoint=='main.home'
-              %} onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' }); return false;" {%
-              endif %}>
-              <span data-lang="profile"></span>
-            </a>
-          </li>
+                    <li>
+                        <a href="{{ url_for('main.home', _anchor='about') }}" {% if request.endpoint=='main.home' %}
+                            onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' }); return false;"
+                            {% endif %}>
+                            <span data-lang="profile"></span>
+                        </a>
+                    </li>
 
-          <li>
-            <a href="{{ url_for('main.home', _anchor='skills') }}" {% if request.endpoint=='main.home'
-              %} onclick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth' }); return false;" {%
-              endif %}>
-              <span data-lang="skills"></span>
-            </a>
-          </li>
+                    <li>
+                        <a href="{{ url_for('main.home', _anchor='skills') }}" {% if request.endpoint=='main.home' %}
+                            onclick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth' }); return false;"
+                            {% endif %}>
+                            <span data-lang="skills"></span>
+                        </a>
+                    </li>
 
-          <li>
-            <a href="{{ url_for('main.home', _anchor='projects') }}" {% if
-              request.endpoint=='main.home' %}
-              onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' }); return false;" {%
-              endif %}>
-              <span data-lang="projects"></span>
-            </a>
-          </li>
+                    <li>
+                        <a href="{{ url_for('main.home', _anchor='projects') }}" {% if request.endpoint=='main.home' %}
+                            onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' }); return false;"
+                            {% endif %}>
+                            <span data-lang="projects"></span>
+                        </a>
+                    </li>
 
-          <li>
-            <a href="{{ url_for('main.home', _anchor='contact') }}" {% if request.endpoint=='main.home'
-              %} onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;" {%
-              endif %}>
-              <span data-lang="contact"></span>
-            </a>
-          </li>
+                    <li>
+                        <a href="{{ url_for('main.home', _anchor='contact') }}" {% if request.endpoint=='main.home' %}
+                            onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;"
+                            {% endif %}>
+                            <span data-lang="contact"></span>
+                        </a>
+                    </li>
 
-          <li>
-            <a href="{{ url_for('blog.index') }}">
-              <span data-lang="blog"></span>
-            </a>
-          </li>
-        </ul>
+                    <li>
+                        <a href="{{ url_for('blog.index') }}">
+                            <span data-lang="blog"></span>
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div class="footer-column">
                 <h3 data-lang="build">
@@ -105,7 +104,8 @@
                     <i class="fab fa-github">
                     </i>
                 </a>
-                <a aria-label="LinkedIn" href="https://linkedin.com/in/adnan-slamet-wibowo-73906035b" rel="noopener noreferrer" target="_blank">
+                <a aria-label="LinkedIn" href="https://linkedin.com/in/adnan-slamet-wibowo-73906035b"
+                    rel="noopener noreferrer" target="_blank">
                     <i class="fab fa-linkedin">
                     </i>
                 </a>
@@ -113,7 +113,8 @@
                     <i class="fab fa-twitter">
                     </i>
                 </a>
-                <a aria-label="Instagram" href="https://instagram.com/aadnanmt" rel="noopener noreferrer" target="_blank">
+                <a aria-label="Instagram" href="https://instagram.com/aadnanmt" rel="noopener noreferrer"
+                    target="_blank">
                     <i class="fab fa-instagram">
                     </i>
                 </a>
@@ -121,7 +122,9 @@
                     <i class="fab fa-tiktok">
                     </i>
                 </a>
-                <a aria-label="Spotify" href="https://open.spotify.com/user/314bjvthnpohaain54tchezpc4ji?si=7_MuMQsPTk2sGxhQrx44UQ" rel="noopener noreferrer" target="_blank">
+                <a aria-label="Spotify"
+                    href="https://open.spotify.com/user/314bjvthnpohaain54tchezpc4ji?si=7_MuMQsPTk2sGxhQrx44UQ"
+                    rel="noopener noreferrer" target="_blank">
                     <i class="fab fa-spotify">
                     </i>
                 </a>
