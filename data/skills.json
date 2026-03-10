@@ -26,23 +26,77 @@
     }
   ],
   "tools": [
-    { "icon": "fab fa-html5",       "name": "HTML" },
-    { "icon": "fab fa-css3-alt",    "name": "CSS" },
-    { "icon": "fab fa-js",          "name": "JS" },
-    { "icon": "fab fa-python",      "name": "Python" },
-    { "icon": "fas fa-terminal",    "name": "Bash" },
-    { "icon": "fab fa-node",        "name": "Node JS" },
-    { "icon": "fab fa-react",       "name": "React" },
-    { "icon": "fab fa-golang",      "name": "Golang" },
-    { "icon": "fab fa-linux",       "name": "Linux" },
-    { "icon": "fab fa-windows",     "name": "Windows" },
-    { "icon": "fab fa-docker",      "name": "Docker" },
-    { "icon": "fab fa-git-alt",     "name": "Git" },
-    { "icon": "fa-brands fa-github","name": "Github" },
-    { "icon": "fa-brands fa-firefox","name": "Firefox" },
-    { "icon": "fab fa-chrome",      "name": "Chromium" },
-    { "icon": "fa-solid fa-code",   "name": "Sublime" },
-    { "icon": "fab fa-markdown",    "name": "Markdown" },
-    { "icon": "fa-brands fa-cloudflare", "name": "Cloudflare" }
+    {
+      "icon": "fab fa-html5",
+      "name": "HTML"
+    },
+    {
+      "icon": "fab fa-css3-alt",
+      "name": "CSS"
+    },
+    {
+      "icon": "fab fa-js",
+      "name": "JS"
+    },
+    {
+      "icon": "fab fa-python",
+      "name": "Python"
+    },
+    {
+      "icon": "fas fa-terminal",
+      "name": "Bash"
+    },
+    {
+      "icon": "fab fa-node",
+      "name": "Node JS"
+    },
+    {
+      "icon": "fab fa-react",
+      "name": "React"
+    },
+    {
+      "icon": "fab fa-golang",
+      "name": "Golang"
+    },
+    {
+      "icon": "fab fa-linux",
+      "name": "Linux"
+    },
+    {
+      "icon": "fab fa-windows",
+      "name": "Windows"
+    },
+    {
+      "icon": "fab fa-docker",
+      "name": "Docker"
+    },
+    {
+      "icon": "fab fa-git-alt",
+      "name": "Git"
+    },
+    {
+      "icon": "fa-brands fa-github",
+      "name": "Github"
+    },
+    {
+      "icon": "fa-brands fa-firefox",
+      "name": "Firefox"
+    },
+    {
+      "icon": "fab fa-chrome",
+      "name": "Chromium"
+    },
+    {
+      "icon": "fa-solid fa-code",
+      "name": "Sublime"
+    },
+    {
+      "icon": "fab fa-markdown",
+      "name": "Markdown"
+    },
+    {
+      "icon": "fa-brands fa-cloudflare",
+      "name": "Cloudflare"
+    }
   ]
 }
