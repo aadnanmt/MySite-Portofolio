@@ -1,7 +1,7 @@
-# backend/routes/home.py
+# backend/routes/main.py
 from flask import Blueprint, render_template, current_app
-from backend.utility.util import get_posts_cached
-from backend.extens import cache
+from backend.services.content import get_posts_cached
+from backend.extensions import cache
 import os
 import json
 

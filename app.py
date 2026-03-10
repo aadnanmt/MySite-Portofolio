@@ -8,10 +8,10 @@ sys.path.append(current_directory)
 
 from flask import Flask, request
 from flask_minify import Minify
-from backend.extens import cache
+from backend.extensions import cache
 
-from backend.security.headers import security_headers
-from backend.routes.home import main_bp
+from backend.middleware.security import security_headers
+from backend.routes.main import main_bp
 from backend.routes.blog import blog_bp
 from backend.routes.seo import seo_bp
 

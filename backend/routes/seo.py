@@ -1,5 +1,5 @@
 from flask import Blueprint, Response, current_app, url_for
-from backend.utility.util import get_posts_cached
+from backend.services.content import get_posts_cached
 
 seo_bp = Blueprint("seo", __name__)
 

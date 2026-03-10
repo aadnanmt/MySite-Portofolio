@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, current_app
-from backend.utility.util import get_posts_cached
-from backend.extens import cache
+from backend.services.content import get_posts_cached
+from backend.extensions import cache
 import markdown
 import os
 import frontmatter
