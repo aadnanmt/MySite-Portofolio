@@ -1,0 +1,79 @@
+/* Error Page Styles */
+
+body.page-error {
+  background: var(--bg-dark);
+  overflow: hidden;
+  font-family: var(--font-code);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+
+  canvas {
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .ui-layer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10vh;
+    text-align: center;
+    z-index: 10;
+    pointer-events: none;
+    width: 100%;
+  }
+
+  .message {
+    color: var(--white);
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    user-select: none;
+    
+    @include mobile {
+        font-size: 0.8rem;
+    }
+  }
+
+  .btn {
+    pointer-events: auto;
+    display: inline-block;
+    padding: 15px 40px;
+    background: transparent;
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    font-family: inherit;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background: var(--cyan);
+      color: black;
+      box-shadow: 0 0 10px var(--cyan), inset 0 0 5px var(--cyan);
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(1px);
+      box-shadow: 0 0 5px var(--cyan);
+    }
+
+    @include mobile {
+      padding: 12px 30px;
+      font-size: 0.9rem;
+    }
+  }
+}
